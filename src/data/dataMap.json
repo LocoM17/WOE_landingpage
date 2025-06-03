@@ -1,0 +1,37 @@
+[
+  {
+    "mapName": "Battle Units Arena",
+    "description": " Un mapa enfocado en el juego en equipo y la coordinación. Los héroes se pueden personalizar con distintas combinaciones de habilidades. Cada arena ofrece misiones únicas, y el objetivo es sumar la mayor cantidad de puntos, ya sea eliminando héroes o completando misiones del escenario. ",
+    "mapType": "custom",
+    "versionGame": {
+      "grafico": "clasic",
+      "version": "(1.27 - actual)"
+    },
+    "PlayersMax": "12",
+    "downloadLink": "https://www.hiveworkshop.com/threads/battle-units-arena.359746/",
+    "Media": {
+      "image1": "../../public/img/BUA_partida.png",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "gif1": "",
+      "gif2": "",
+      "linkVideo": ""
+    },
+    "creador1": {
+      "name": "Leforyer",
+      "information": "Creador del mapa",
+      "perfilIcon": "../../public/img/Leforyer.jpg"
+    },
+    "creador2": {
+      "name": "Gerhalt",
+      "information": "Cocreador",
+      "perfilIcon": "../../public/img/Gerhalt.jpg"
+    },
+    "creador3": {
+      "name": "",
+      "information": "",
+      "perfilIcon": ""
+    }
+  }
+]

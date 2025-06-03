@@ -1,0 +1,31 @@
+[
+  {
+    "nameModel": "Mutkairi",
+    "typeModel": "Reforged",
+    "description": "Descubre un colosal guerrero híbrido, nacido de la fusión entre la imponente raza Tauren y la fuerza bruta de un mamut ancestral. Perfecto para introducir en tus mapas, campañas y cinemáticas de Reforged, este modelo ofrece una presencia única, versátil y cargada de personalidad.",
+    "downloadLink1": "https://www.hiveworkshop.com/threads/mutkairi.357136/",
+    "downloadLink2": "",
+    "media": {
+      "img1": "../../public/img/Mamut.png",
+      "img2": "",
+      "gif1": "",
+      "gif2": "",
+      "linkVideo1": "https://youtu.be/OXE_czXPQQM",
+      "linkVideo2": ""
+    },
+    "autores": {
+      "autor1": {
+        "name": "ZoomMan",
+        "information": "Creador del Modelo",
+        "contact1": "https://www.hiveworkshop.com/members/zoomman.288916/",
+        "contact2": ""
+      },
+      "autor2": {
+        "name": "",
+        "information": "",
+        "contact1": "",
+        "contact2": ""
+      }
+    }
+  }
+]

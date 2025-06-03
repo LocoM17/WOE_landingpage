@@ -1,0 +1,16 @@
+html {
+  scroll-behavior: smooth;
+  // scrollbar-color: #0e0c0c #252222;
+  scrollbar-width: none;
+}
+/* index.css o global.css */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0e0e10; /* o el color que uses como base */
+  color: rgb(0, 0, 0);
+  opacity: 1 !important; /* fuerza visibilidad */
+
+  --chakra-colors-chakra-body-bg: #0e0e10 !important;
+}
