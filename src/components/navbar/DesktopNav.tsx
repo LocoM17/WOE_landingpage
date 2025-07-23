@@ -40,13 +40,18 @@ function DesktopNav() {
       children: [
         {
           label: "Mapas mas destacados",
-          subLabel: "Los mas jugados",
+          subLabel: "Los representantes de la comunidad",
           href: "#infoMapasDestacados",
         },
         {
-          label: "Modelos mas destacados",
-          subLabel: "Los mejor diseñados",
-          href: "#",
+          label: "Mapas en desarrollo",
+          subLabel: "Otros mapas conocidos dentro de la comunidad",
+          href: "#infoOtrosMapas",
+        },
+        {
+          label: "Modelos Reforjados",
+          subLabel: "modelos creados para el modo Reforjado",
+          href: "#infoModelosReforjados",
         },
       ],
     },

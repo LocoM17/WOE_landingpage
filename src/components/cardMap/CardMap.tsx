@@ -6,21 +6,43 @@ interface MapaInterface {
 }
 export default function CardMap({ details }: MapaInterface) {
   return (
-    <Box className={styles.card}>
-      <Box className={styles.poster}>
+    <Box
+      className={styles.card}
+      transition={"all 0.3s ease"}
+      _hover={{ transform: "scale(1.03)", boxShadow: "lg" }}
+    >
+      <Box
+        className={styles.poster}
+        // overflow={"hidden"} borderRadius={"md"}
+      >
         <Box className={styles.imgcontededor}>
-          <Image src={details.Media.image1} alt="Poster" />
+          <Image
+            src={details.Media.image1}
+            alt="Poster"
+            // objectFit={"cover"}
+            // w={"full"}
+            // h={"200px"}
+          />
         </Box>
       </Box>
 
-      <Box className={styles.details}>
+      <Box
+        className={styles.details}
+        // bg={"rgba(0,0,0,0.6)"}
+        // borderRadius={"md"}
+        // p={4}
+      >
         <Box className={styles.tags}>
           <p className={styles.title}>{details.mapName}</p>
           <p className={styles.type}>Tipo de mapa: {details.mapType}</p>
         </Box>
         <br />
         <Box className={styles.info}>
-          <Text>{details.description}</Text>
+          <Text
+          // noOfLines={3}
+          >
+            {details.description}
+          </Text>
         </Box>
 
         {/**iterrando creadores */}

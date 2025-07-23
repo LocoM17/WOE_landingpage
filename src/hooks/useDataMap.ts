@@ -6,7 +6,7 @@ import { MapData } from "@/interface/MapData";
 
 const dataMapRaw = dataMap as MapData[];
 
-const page_size = 4;
+const page_size = 10;
 const fetchPaginateData = async ({
   pageParam = 1,
 }: QueryFunctionContext): Promise<MapData[]> => {
@@ -23,7 +23,7 @@ const fetchPaginateData = async ({
 
 export default function useDataMap() {
   return useInfiniteQuery<MapData[]>({
-    queryKey: ["maps"],
+    queryKey: ["dataMaps"],
     queryFn: fetchPaginateData,
     initialPageParam: 1,
     getNextPageParam: (lastPage, allPages) => {

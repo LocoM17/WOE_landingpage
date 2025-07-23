@@ -1,10 +1,9 @@
-import { Box, Divider, Heading, layout, Text } from "@chakra-ui/react";
+import { Box, Center, Divider, Heading, layout, Text } from "@chakra-ui/react";
 import Navbar from "./navbar/Navbar.tsx";
 import Hero from "./sections/hero/Hero.tsx";
 import Footer from "./footer/Footer.tsx";
 import CardMap from "./cardMap/CardMap.tsx";
 import useDataMap from "@/hooks/useDataMap.ts";
-import Testimonio from "./sections/testimonio/Testimonio.tsx";
 import Informacion from "./sections/info_desarrollador/Informacion_desarrollador.tsx";
 import History from "./sections/historia/History.tsx";
 import Information from "./sections/informacionComunidad/Information.tsx";
@@ -12,12 +11,12 @@ import { useTheme } from "@/context/themes/MyThemeContext.tsx";
 import "@/scss/index.scss";
 import CarModel from "./sections/cardModels/CarModel.tsx";
 import { useEffect, useState } from "react";
+import OtherProyects from "./sections/otherMaps/OtherProyects.tsx";
+import CardMaps from "./sections/cardMaps/CardMaps.tsx";
+import Testimonio from "./sections/testimonio/Testimonio.tsx";
 export function Layout() {
   //colores
   const { themeStyle } = useTheme();
-
-  const { data, isLoading } = useDataMap();
-  const mapas = data?.pages.flatMap((page) => page) ?? [];
 
   return (
     <Box
@@ -35,6 +34,8 @@ export function Layout() {
 
       {/* Main Content */}
       <Box as="main" bgColor={themeStyle.bg_general2}>
+        {/* Pegar lo que esta en notas de color negro xd */}
+
         {/* Aquí puedes colocar secciones internas */}
 
         {/* HERO */}
@@ -61,6 +62,7 @@ export function Layout() {
           // bgGradient={`linear(to-b, ${themeStyle.bg_general1}0%, black)`}
           bgGradient={`linear(to-b, ${themeStyle.bg_general1} 0%, black)`}
           scrollSnapAlign="start"
+          px={"50px"}
         >
           <Information />
         </Box>
@@ -84,38 +86,17 @@ export function Layout() {
         </Box>
 
         {/* Mapas destacados */}
-        <Box
-          pt={"100px"}
-          id={"infoMapasDestacados"}
-          as="section"
-          mt={8}
-          bg={themeStyle.bg_general2}
-          h={"100vh"}
-        >
-          <Box textAlign={"center"} p={4} h={"200px"} alignContent={"center"}>
-            <Heading size="2xl" mb={2} color={themeStyle.Cl_titulo2}>
-              MAPAS DESTACADOS
-            </Heading>
-            <Text fontFamily={"body"} color={"white"} fontSize={"2xl"} mt={50}>
-              Aquí puedes encontrar una lista de los mapas más populares y
-              recomendados por la comunidad.
-            </Text>
-          </Box>
-          <Box
-            p={10}
-            mt={4}
-            display="grid"
-            maxWidth={"100%"}
-            gridTemplateColumns="repeat(5 , 1fr)"
-            gap={3}
-            justifyItems={"center"}
-          >
-            {mapas.map((d) => (
-              <CardMap key={d.mapName} details={d} />
-            ))}
-          </Box>
-        </Box>
+        <CardMaps></CardMaps>
 
+        <Box
+          mt={"115px"}
+          w="100%"
+          h="40px"
+          bgGradient="linear(to-b,rgba(0,0,0,0)   0%   0%,rgba(0,0,0,1) 100%)"
+          p={6} // padding interno
+          mx="auto"
+        />
+        <OtherProyects></OtherProyects>
         <Box
           w="100%"
           h="40px"
@@ -123,11 +104,10 @@ export function Layout() {
           p={6} // padding interno
           mx="auto"
         />
-
         {/* Modelos de la comunidad */}
-        <Box maxW={"100vw"} maxH={"100vh"} h={"100vh"} w={"100vw"}>
-          <CarModel />
-        </Box>
+        {/* <Box id={"infoModelosReforjados"}> */}
+        <CarModel />
+        {/* </Box> */}
 
         <Box
           w="100%"
@@ -141,18 +121,19 @@ export function Layout() {
         <Box id="infoPilaresComunidad" as="section">
           <Testimonio />
         </Box>
-        <Box
+        {/* <Box
           w="100%"
           h="40px"
           bgGradient="linear(to-b,rgba(0,0,0,0)   0%   0%,rgba(0,0,0,1) 100%)"
           p={6} // padding interno
           mx="auto"
-        />
+        /> */}
+
         {/* Testimonios */}
 
-        <Box id="infoComentarios" as="section">
+        {/* <Box id="infoComentarios" as="section">
           <Testimonio />
-        </Box>
+        </Box> */}
 
         <Box
           w="100%"

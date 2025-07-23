@@ -44,15 +44,29 @@ export default function Information() {
   const { themeStyle } = useTheme();
   return (
     <>
-      <Container marginTop={"50px"} />
-
-      <Container maxW={"8xl"} py={12} h="100vh">
+      <Container
+        maxW={"8xl"}
+        py={{ base: 10, md: 24 }}
+        px={{ mase: 4, md: 10 }}
+      >
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-          <Stack spacing={4}>
-            <Heading fontSize={"6xl"}>
-              La comunidad de <Text>World OF EDITORS</Text>
+          <Stack spacing={6}>
+            <Heading
+              fontSize={{ base: "1.3rem", md: "2rem" }}
+              color={themeStyle.Cl_textDescriotion1}
+            >
+              La comunidad de <Text color={"#58ADCD"}>World OF EDITORS</Text>
             </Heading>
-            <Text color={"gray.500"} fontSize={"x-large"}>
+            <Text
+              color={"gray.500"}
+              fontSize={{
+                base: "0.9rem",
+                md: "1.1rem",
+                lg: "1.2rem",
+                xl: "1.4rem",
+              }}
+              lineHeight={"tall"}
+            >
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Voluptates suscipit sed consequuntur commodi repellat odio in
               excepturi ut reprehenderit eligendi, quas sapiente velit labore

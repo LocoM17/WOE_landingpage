@@ -13,86 +13,192 @@ import {
   useBreakpointValue,
   useColorModeValue,
   useDisclosure,
+  Drawer,
+  DrawerBody,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  theme,
 } from "@chakra-ui/react";
 import DesktopNav from "./DesktopNav";
 import { useTheme } from "../../context/themes/MyThemeContext";
+import { useRef } from "react";
+import MobileNav from "./MobileNav";
+import { NavItem } from "./NavItem";
 
 type Props = {};
-function Navbar({}: Props) {
+export default function Navbar({}: Props) {
   const { themeStyle } = useTheme();
-  const { isOpen, onToggle } = useDisclosure();
+  const { isOpen, onOpen, onClose, onToggle } = useDisclosure();
 
+  const btnRef = useRef(null); // para enfoque del Drawer
+  const NAV_ITEMS: Array<NavItem> = [
+    //opciones del sideBar
+    //primer elemento
+    {
+      label: "Informacion Principal",
+      href: "#infoComunidad",
+      children: [
+        {
+          label: "La comunidad de World of editors",
+          subLabel: "¿Quienes somos?",
+          href: "#infoComunidad",
+        },
+        {
+          label: "La historia de la comunidad",
+          subLabel: "¿Como nacio?",
+          href: "#infoHistoria",
+        },
+      ],
+    },
+
+    //segundo elemento
+    {
+      label: "Proyectos de la comunidad",
+      href: "#infoMapasDestacados",
+      children: [
+        {
+          label: "Mapas mas destacados",
+          subLabel: "Los representantes de la comunidad",
+          href: "#infoMapasDestacados",
+        },
+        {
+          label: "Mapas en desarrollo",
+          subLabel: "Otros mapas conocidos dentro de la comunidad",
+          href: "#infoOtrosMapas",
+        },
+        {
+          label: "Modelos Reforjados",
+          subLabel: "modelos creados para el modo Reforjado",
+          href: "#infoModelosReforjados",
+        },
+      ],
+    },
+
+    //tercer elemento
+    {
+      label: "Colaboradores",
+      href: "#infoPilaresComunidad",
+      children: [
+        {
+          label: "Los pilares de la comunidad",
+          subLabel: "Find the perfect designer for your team",
+          href: "#infoPilaresComunidad",
+        },
+        {
+          label: "Comentarios ",
+          subLabel: "See top designers, handpicked by us",
+          href: "#infoComentarios",
+        },
+      ],
+    },
+
+    //cuarto elemento
+    {
+      label: "Desarrollador de la Web",
+      href: "#infoDesarrollador",
+    },
+  ];
   return (
     <Box>
-      {" "}
-      {/* contenedor principal */}
-      <Flex // contenedor del navbar
+      <Flex
         zIndex={101}
         position="fixed"
         top="0"
         left="0"
         right="0"
-        bg={themeStyle.bg_general1} // color de fondo
-        color={useColorModeValue("gray.600", "white")} // color del texto
-        minH={"60px"} // altura mínima
-        py={{ base: 2 }} // padding vertical
-        px={{ base: 4 }} // padding horizontal
-        borderBottom={1} // borde inferior
-        borderStyle={"solid"} // estilo de borde
-        borderColor={useColorModeValue("gray.200", "gray.900")} // color del borde
-        align={"center"} // alineación
+        bg={themeStyle.bg_general1}
+        color={useColorModeValue("gray.600", "white")}
+        minH={"60px"}
+        py={{ base: 2 }}
+        px={{ base: 4 }}
+        borderBottom={1}
+        borderStyle={"solid"}
+        borderColor={useColorModeValue("gray.200", "gray.900")}
+        align={"center"}
       >
+        {/* Botón de menú solo visible en móviles */}
         <Flex
           flex={{ base: 1, md: "auto" }}
           ml={{ base: -2 }}
           display={{ base: "flex", md: "none" }}
         >
           <IconButton
-            onClick={onToggle}
-            icon={
-              isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
-            }
+            ref={btnRef}
+            onClick={onOpen}
+            icon={<HamburgerIcon w={5} h={5} />}
             variant={"ghost"}
             aria-label={"Toggle Navigation"}
+            backgroundColor={themeStyle.Cl_titulo2}
+            _hover={{ backgroundColor: themeStyle.Cl_titulo1 }}
           />
         </Flex>
-        <Flex
-          align={"center"} // alineación
-          flex={{ base: 1 }}
-          justify={{ base: "center", md: "start" }}
-        >
-          <a href="#infoHeader">
-            <Box display="flex" alignItems={"center"}>
-              <Image
-                src={logoimg}
-                alt="xddd"
-                boxSize="60px"
-                objectFit="contain"
-              />{" "}
-              {/* logo */}
-              <Text
-                textAlign={"center"}
-                fontFamily={"heading"}
-                color={useColorModeValue("white", "grain.800")} // color del texto
-                fontSize={{ base: "1xl", md: "1xl" }} // tamaño de fuente
-                fontWeight={600} // peso de fuente
-              >
-                World Of Editors
-              </Text>
-            </Box>
-          </a>
+
+        {/* Logo y Título */}
+        <Flex align="center" justify="space-between" w="100%">
+          {/* IZQUIERDA: Logo */}
+          <Box display="flex" alignItems="center">
+            <a href="#infoHeader">
+              <Box display={"flex"} alignItems={"center"}>
+                <Image
+                  src={logoimg}
+                  alt="Logo"
+                  boxSize="60px"
+                  objectFit="contain"
+                />
+                <Text fontSize={"2xl"} fontWeight={"normal"} color={"white"}>
+                  World Of Editors Oficial
+                </Text>
+              </Box>
+            </a>
+          </Box>
+
+          {/* CENTRO: Nav solo en desktop */}
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
           </Flex>
+
+          {/* DERECHA: Botón hamburguesa solo en móvil */}
+          <Flex display={{ base: "flex", md: "none" }}>
+            <IconButton
+              onClick={onToggle}
+              icon={
+                isOpen ? (
+                  <CloseIcon w={3} h={3} />
+                ) : (
+                  <HamburgerIcon w={5} h={5} />
+                )
+              }
+              variant="ghost"
+              aria-label="Toggle Navigation"
+            />
+          </Flex>
         </Flex>
 
-        <Stack direction={"row"}>
-          <div>1</div>
-          <div>2</div>
-        </Stack>
+        {/* Acciones a la derecha */}
+        {/* Menú Desktop */}
       </Flex>
+
+      {/* Drawer para mobile nav */}
+      <Drawer
+        isOpen={isOpen}
+        placement="left"
+        onClose={onClose}
+        finalFocusRef={btnRef}
+      >
+        <DrawerOverlay />
+        <DrawerContent bg={themeStyle.bg_general1}>
+          <DrawerCloseButton />
+          <DrawerBody mt={10}>
+            <Stack spacing={4}>
+              {/* Menú Mobile (solo visible cuando isOpen es true) */}
+              <Collapse in={isOpen} animateOpacity>
+                <MobileNav navItems={NAV_ITEMS} />
+              </Collapse>
+            </Stack>
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
     </Box>
   );
 }
-
-export default Navbar;

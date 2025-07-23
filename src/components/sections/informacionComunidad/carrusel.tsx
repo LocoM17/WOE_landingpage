@@ -1,6 +1,4 @@
-"use client";
-
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   IconButton,
@@ -14,6 +12,7 @@ import {
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 // And react-slick as our Carousel Lib
 import Slider from "react-slick";
+import { useTheme } from "@/context/themes/MyThemeContext";
 
 // Settings for the slider
 const settings = {
@@ -29,21 +28,22 @@ const settings = {
 };
 
 export default function Carrusel() {
+  const { themeStyle } = useTheme();
   // As we have used custom buttons, we need a reference variable to
   // change the state
   const [slider, setSlider] = React.useState<Slider | null>(null);
 
   // These are the breakpoints which changes the position of the
   // buttons as the screen size changes
-  const top = useBreakpointValue({ base: "90%", md: "50%" });
-  const side = useBreakpointValue({ base: "30%", md: "40px" });
+  const top = useBreakpointValue({ base: "65%", md: "65%" });
+  const side = useBreakpointValue({ base: "10px", md: "40px" });
 
   // This list contains all the data for carousels
   // This can be static or loaded from a server
   const cards = [
     {
       title: "Directos en vivo",
-      // text: "Disfruta de los directos de la comunidad.",
+      text: "Disfruta de los directos de la comunidad.",
       image: "@/../../../../../public/img/PartidaDirecto_7.png",
     },
     {
@@ -58,14 +58,22 @@ export default function Carrusel() {
       image:
         "https://www.hiveworkshop.com/data/ratory-images/282/282330-fbabdc65d7bebfee9df4876c1ab25ccc.png",
     },
+    {
+      title: "El canal de la comunidad",
+      text: "Canal de youtube de la comunidad",
+      image: "@/../../../../../public/img/Videos_canal_yt_2.png",
+    },
   ];
 
+  const [btnState, setBtnState] = useState(false);
   return (
     <Box
       position={"relative"}
-      height={"600px"}
       width={"full"}
+      h={{ base: "300px", md: "500px", lg: "600px" }}
       overflow={"hidden"}
+      borderRadius={"xl"}
+      role="group"
     >
       {/* CSS files for react-slick */}
       <link
@@ -88,8 +96,16 @@ export default function Carrusel() {
         transform={"translate(0%, -50%)"}
         zIndex={2}
         onClick={() => slider?.slickPrev()}
+        pointerEvents="auto"
+        size={{ base: "xs", md: "sm" }}
+        // bg={themeStyle.Cl_titulo1}
+        _groupHover={{
+          bg: themeStyle.Cl_titulo1,
+          color: "black",
+          transition: "0.3s",
+        }}
       >
-        <BiLeftArrowAlt size="40px" />
+        <BiLeftArrowAlt size="30px" />
       </IconButton>
       {/* Right Icon */}
       <IconButton
@@ -101,38 +117,71 @@ export default function Carrusel() {
         transform={"translate(0%, -50%)"}
         zIndex={2}
         onClick={() => slider?.slickNext()}
+        pointerEvents="auto"
+        size={{ base: "xs", md: "sm" }}
+        _groupHover={{
+          bg: themeStyle.Cl_titulo1,
+          color: "black",
+          transition: "0.3s",
+        }}
       >
-        <BiRightArrowAlt size="40px" />
+        <BiRightArrowAlt size="30px" />
       </IconButton>
       {/* Slider */}
       <Slider {...settings} ref={(slider) => setSlider(slider)}>
         {cards.map((card, index) => (
           <Box
-            border={"2px solid grey"}
             key={index}
-            h={"250px"}
-            height={"600px"}
+            // border={"2px solid grey"}
+            h={{ base: "300px", md: "500px", lg: "600px" }}
             position="relative"
             backgroundPosition="center"
             backgroundRepeat="no-repeat"
             backgroundSize="cover"
             backgroundImage={`url(${card.image})`}
           >
+            <Box
+              position="absolute"
+              top={0}
+              left={0}
+              right={0}
+              bottom={0}
+              zIndex={1}
+              bg="rgba(0, 0, 0, 0.29)"
+              // bg={"red"}
+            />
             {/* This is the block you need to change, to customize the caption */}
-            <Container size="container.lg" height="600px" position="relative">
+            <Container
+              size="container.lg"
+              h={"100%"}
+              maxW={"container.lg"}
+              position="relative"
+              zIndex={2}
+              transition="0.3s"
+              color={"transparent"}
+              justifyItems={"center"}
+              _groupHover={{
+                bg: "rgba(0, 0, 0, 0.55)",
+                transition: "0.3s",
+                color: themeStyle.Cl_titulo2,
+              }}
+            >
               <Stack
-                spacing={6}
+                spacing={4}
                 w={"full"}
+                h={"100%"}
                 maxW={"lg"}
-                position="absolute"
-                top="75%"
-                right={"40px"}
-                transform="translate(0, -50%)"
+                justify={"center"}
+                // align={{ base: "center" }}
+                textAlign={{ base: "center" }}
+                px={{ base: 4, md: 0 }}
               >
-                <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
+                <Heading
+                  fontSize={{ base: "1.5rem", md: "1.5rem", lg: "2rem" }}
+                >
                   {card.title}
                 </Heading>
-                <Text fontSize={{ base: "md", lg: "2xl" }} color="GrayText">
+                <Text fontSize={{ base: "1rem", md: "1.3rem", lg: "1.4rem" }}>
                   {card.text}
                 </Text>
               </Stack>

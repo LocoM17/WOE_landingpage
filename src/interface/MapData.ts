@@ -1,4 +1,5 @@
 export interface MapData {
+  mapId: string;
   mapName: string;
   description: string;
   mapType: string;

@@ -1,19 +1,19 @@
-"use client";
-
+import { useTheme } from "@/context/themes/MyThemeContext";
 import {
+  Avatar,
   Box,
+  Container,
   Flex,
   Heading,
-  Text,
   Stack,
-  Container,
-  Avatar,
+  Text,
   useColorModeValue,
 } from "@chakra-ui/react";
+import React from "react";
 
-interface Props {
+type Props = {
   children: React.ReactNode;
-}
+};
 
 const Testimonial = (props: Props) => {
   const { children } = props;
@@ -56,9 +56,10 @@ const TestimonialContent = (props: Props) => {
 
 const TestimonialHeading = (props: Props) => {
   const { children } = props;
+  const { themeStyle } = useTheme();
 
   return (
-    <Heading as={"h3"} fontSize={"xl"}>
+    <Heading color={themeStyle.Cl_titulo3} as={"h3"} fontSize={"xl"}>
       {children}
     </Heading>
   );
@@ -89,7 +90,16 @@ const TestimonialAvatar = ({
 }) => {
   return (
     <Flex align={"center"} mt={8} direction={"column"}>
-      <Avatar src={src} mb={2} />
+      <Avatar
+        src={src}
+        mb={2}
+        size={{
+          base: "md",
+          md: "md",
+          lg: "2xl",
+          "2xl": "2xl",
+        }}
+      />
       <Stack spacing={-1} align={"center"}>
         <Text fontWeight={600}>{name}</Text>
         <Text fontSize={"sm"} color={useColorModeValue("gray.600", "gray.400")}>
@@ -101,39 +111,76 @@ const TestimonialAvatar = ({
 };
 
 export default function Testimonio() {
+  const { themeStyle } = useTheme();
+
   return (
-    <Box bg={"#121214"}>
-      <Container
-        maxW={"7xl"}
-        h={"100vh"}
-        py={16}
-        as={Stack}
-        spacing={12}
-        justify={"center"}
+    <Box
+      bg={"#121214"}
+      w={"100vw"}
+      px={"50px"}
+      pt={"120px"}
+      justifyItems={"center"}
+      pb={"150px"}
+    >
+      <Stack
+        spacing={0}
+        align={"center"}
+        paddingBottom={{
+          base: "1rem",
+          md: "2rem",
+          lg: "4rem",
+          xl: "6rem",
+          "2xl": "10rem",
+        }}
       >
-        <Stack spacing={0} align={"center"}>
-          <Heading>Pilares de la comunidad</Heading>
-          <Text>Opinion de los miembros mas importantes de la comunidad.</Text>
-        </Stack>
-        <Stack
-          direction={{ base: "column", md: "row" }}
-          spacing={{ base: 10, md: 4, lg: 10 }}
+        <Heading
+          textAlign={"center"}
+          fontSize={{
+            base: "2rem",
+            md: "3rem",
+          }}
+          color={themeStyle.Cl_titulo2}
         >
-          <Testimonial>
-            <TestimonialContent>
-              <TestimonialHeading>Efficient Collaborating</TestimonialHeading>
-              <TestimonialText>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
-                neque sed imperdiet nibh lectus feugiat nunc sem.
-              </TestimonialText>
-            </TestimonialContent>
-            <TestimonialAvatar
-              src={"../../public/img/Leforyer.jpg"}
-              name={"Leforyer"}
-              title={"Moderador de la comunidad"}
-            />
-          </Testimonial>
-          <Testimonial>
+          Pilares de la comunidad
+        </Heading>
+        <Text
+          pt={"15px"}
+          textAlign={"center"}
+          fontSize={{
+            base: "0.99rem",
+            md: "1.5rem",
+          }}
+        >
+          Opiniones auténticas de los miembros más valorados sobre lo que hace
+          especial a nuestra comunidad.
+        </Text>
+      </Stack>
+      <Stack
+        direction={{ base: "column", md: "row" }}
+        spacing={{ base: 10, md: 4, lg: 100 }}
+      >
+        {[1, 2, 3, 4].map((d) => (
+          <Box h={"400px"} maxW={"sm"}>
+            <Testimonial>
+              <TestimonialContent>
+                <TestimonialHeading>Efficient Collaborating</TestimonialHeading>
+                <TestimonialText>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Auctor neque sed imperdiet nibh lectus feugiat nunc sem. Lorem
+                  ipsum dolor sit amet, consectetur adipiscing elit. Auctor
+                  neque sed imperdiet nibh lectus feugiat nunc sem.
+                </TestimonialText>
+              </TestimonialContent>
+
+              <TestimonialAvatar
+                src={"../../public/img/Leforyer.jpg"}
+                name={"Leforyer"}
+                title={"Moderador de la comunidad"}
+              />
+            </Testimonial>
+          </Box>
+        ))}
+        {/* <Testimonial>
             <TestimonialContent>
               <TestimonialHeading>Intuitive Design</TestimonialHeading>
               <TestimonialText>
@@ -162,9 +209,8 @@ export default function Testimonio() {
               name={"Ruke"}
               title={"Administrador del servidor"}
             />
-          </Testimonial>
-        </Stack>
-      </Container>
+          </Testimonial> */}
+      </Stack>
     </Box>
   );
 }
