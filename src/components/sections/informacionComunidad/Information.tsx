@@ -52,7 +52,7 @@ export default function Information() {
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
           <Stack spacing={6}>
             <Heading
-              fontSize={{ base: "1.3rem", md: "2rem" }}
+              fontSize={{ base: "1.3rem", md: "2rem", xl: "3rem" }}
               color={themeStyle.Cl_textDescriotion1}
             >
               La comunidad de <Text color={"#58ADCD"}>World OF EDITORS</Text>

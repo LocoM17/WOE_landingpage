@@ -6,8 +6,8 @@ export default function UseDataMapOtherPageSize() {
       sm: 1,
       md: 2,
       lg: 3,
-      xl: 4,
-      "2xl": 5,
+      xl: 3,
+      "2xl": 4,
     }) ?? 1;
 
   const cardWidth =
@@ -16,8 +16,8 @@ export default function UseDataMapOtherPageSize() {
       sm: 200,
       md: 220,
       lg: 255,
-      xl: 280,
-      "2xl": 300,
+      xl: 270,
+      "2xl": 270,
     }) ?? 200;
 
   return { pageSize, cardWidth };

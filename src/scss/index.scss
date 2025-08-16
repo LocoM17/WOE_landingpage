@@ -8,9 +8,9 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #0e0e10; /* o el color que uses como base */
+  // background-color: #d400ff; /* o el color que uses como base */
   color: rgb(0, 0, 0);
   opacity: 1 !important; /* fuerza visibilidad */
-
+  width: 100vw;
   --chakra-colors-chakra-body-bg: #0e0e10 !important;
 }

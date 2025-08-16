@@ -29,18 +29,18 @@ export default function History() {
         "Mucho antes de Discord, World of Editors nació como un foro clásico fundado por Ruke, un lugar donde la comunidad compartía mapas, resolvía dudas y aprendía junta. Restaurado por Lordsheshe en 2013, conservó el estilo de los foros antiguos —posiblemente desde 2011— y se convirtió en un punto de encuentro para creadores de toda Hispanoamérica.En esa época no existían las facilidades actuales: los chats eran limitados, los recursos se ocultaban tras comentarios, y registrarse no era tan simple como hacer clic en (Iniciar sesión con Google). Pero eso obligaba a muchos a participar, y más de uno terminó quedándose. Aunque gran parte de esos usuarios se perdió con el tiempo, dejaron su huella.Gracias a figuras como Gadooflion y Lordsheshe, el foro sobrevivió incluso cuando estuvo a punto de cerrarse. Lo que comenzó como un simple sitio para descargar herramientas, se convirtió en el corazón de una comunidad que sigue viva hasta hoy. ",
     },
     {
-      src: "@/../../../../../public/img/Foro del 2012.png",
-      label: "2022 - Expansión",
+      src: "@/../../../../../public/img/Foro_actual.png",
+      label: "2016 - Expansión",
       estado: false,
       descipcion:
-        "descripcion2: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore, delectus rerum officiis sit nulla aspernatur ducimus iure amet commodi laboriosam quos, autem et doloremque vel voluptates repellendus exercitationem. Ipsum, in!",
+        "Esta versión del foro fue una morada más estructurada y visualmente cuidada, inspirada en el estilo de 2014 con una estética fría. Aunque su actualización nunca se completó del todo, fue un periodo clave para la comunidad. Se implementaron roles y recompensas visibles que reconocían las contribuciones de los usuarios. También se organizaron concursos, siendo el de Bosses el más recordado. Durante esta etapa, Kadakash propuso la idea de abrir un canal de YouTube; aunque solo subió algunos tutoriales, Zharko terminó aportando la mayoría de los videos. Juntos, impulsaron también la creación del servidor de Discord, abriendo así una nueva etapa para World of Editors.",
     },
     {
       src: "@/../../../../../public/img/servidorPage1.png",
-      label: "2024 - Consolidación",
+      label: "2024 - actualidad",
       estado: false,
       descipcion:
-        "descripcion3: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore, delectus rerum officiis sit nulla aspernatur ducimus iure amet commodi laboriosam quos, autem et doloremque vel voluptates repellendus exercitationem. Ipsum, in!",
+        "Ahora el la comunidad se organiza por discord donde postean sus proyectos, consultan sus dudas, comparter recursos, devaten del juego o el editos entre otras cosas, el foro quedo en el pasado, toda actividad se da por ese medio, ahora se organizan los usuarios para jugar partidas ya sea de mapas de la comunidad u otros. shikuso diseño un pequeño sitio para poder hostear partidas en el juego clasico el cual se usa con mucha continuidad junto con el apoyo de Ruke que presta un servidor privado para su funcionamiento. actualmente se organizan sorteos y otros eventos, los tutoriales persisten hasta el momento, y se incorporaron nuevos mienbros con nuevos proyectos y recursos hasta la actualidad",
     },
   ];
   const [elemento, setElemento] = useState(timelineImage[0]);

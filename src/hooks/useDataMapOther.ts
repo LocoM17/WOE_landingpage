@@ -6,111 +6,76 @@ export interface MapData {
   name: string;
   descripcion: string;
   imgUrl: string;
+  downloader: string;
 }
 const dataMapRaw: MapData[] = [
   {
-    idOtherMap: "1",
-    name: "Ruins of Azkaron",
-    descripcion: "Mapa de batalla en ruinas ancestrales.",
-    imgUrl: "https://www.hiveworkshop.com/media/parc-png.142222/full",
+    idOtherMap: "21",
+    name: "LuchaDeHeroes",
+    descripcion:
+      "Battle Royale sin habilidades iniciales, obtenidas mediante ítems en el mapa.",
+    imgUrl: "https://www.hiveworkshop.com/media/lucha-de-heroes.142222/full",
+    downloader: "—",
   },
   {
-    idOtherMap: "2",
-    name: "Frozen Kingdom",
-    descripcion: "Un reino congelado lleno de desafíos.",
-    imgUrl: "https://www.hiveworkshop.com/media/parc-png.142222/full",
+    idOtherMap: "22",
+    name: "Panda Wars",
+    descripcion: "Hero Arena rápido y sin balance ambientado en un mapa 32x32.",
+    imgUrl: "https://www.hiveworkshop.com/media/panda-wars.142222/full",
+    downloader: "—",
   },
   {
-    idOtherMap: "3",
-    name: "Mystic Forest",
-    descripcion: "Bosque encantado donde nada es lo que parece.",
-    imgUrl: "https://www.hiveworkshop.com/media/garrosh-jpg.142198/full",
+    idOtherMap: "23",
+    name: "Pulpines Party - Proyecto WOE",
+    descripcion:
+      "Espacio de conversación y desarrollo de ideas dentro del ecosistema WOE.",
+    imgUrl: "https://www.hiveworkshop.com/media/pulpines-party.142222/full",
+    downloader: "—",
   },
   {
-    idOtherMap: "4",
-    name: "Desert Siege",
-    descripcion: "Lucha por recursos en una tormenta de arena.",
-    imgUrl: "https://www.hiveworkshop.com/media/garrosh-jpg.142198/full",
+    idOtherMap: "24",
+    name: "MortalCraft",
+    descripcion:
+      "Mapa estilo AoS/Hero Arena con enfoque en combate entre héroes.",
+    imgUrl: "https://www.hiveworkshop.com/media/mortalcraft.142222/full",
+    downloader: "—",
   },
   {
-    idOtherMap: "5",
-    name: "Volcano Core",
-    descripcion: "Batallas dentro del corazón de un volcán.",
-    imgUrl: "",
+    idOtherMap: "25",
+    name: "CASTLE INVASION (RPG)",
+    descripcion:
+      "Dungeon RPG estilo WarChaser con modos singleplayer y multiplayer.",
+    imgUrl: "https://www.hiveworkshop.com/media/castle-invasion.142222/full",
+    downloader: "—",
   },
   {
-    idOtherMap: "6",
-    name: "Nightfall Keep",
-    descripcion: "Fortaleza sumida en la oscuridad.",
-    imgUrl:
-      "https://www.hiveworkshop.com/media/qq%E5%9B%BE%E7%89%8720250529212046-png.142195/full",
+    idOtherMap: "26",
+    name: "Caravana del Vacío (beta)",
+    descripcion: "Campaña en desarrollo con enfoque narrativo y exploración.",
+    imgUrl: "https://www.hiveworkshop.com/media/caravana-del-vacio.142222/full",
+    downloader: "—",
   },
   {
-    idOtherMap: "7",
-    name: "Oceanic Front",
-    descripcion: "Combates navales en aguas turbulentas.",
-    imgUrl:
-      "https://www.hiveworkshop.com/media/qq%E5%9B%BE%E7%89%8720250529212046-png.142195/full",
+    idOtherMap: "28",
+    name: "Village Protectors (VP)",
+    descripcion: "Hero Defense / Supervivencia con mecánicas cooperativas.",
+    imgUrl: "https://www.hiveworkshop.com/media/village-protectors.142222/full",
+    downloader: "—",
   },
   {
-    idOtherMap: "8",
-    name: "Shadow Caves",
-    descripcion: "Mazmorras oscuras llenas de trampas.",
-    imgUrl:
-      "https://www.hiveworkshop.com/media/qq%E5%9B%BE%E7%89%8720250529212046-png.142195/full",
+    idOtherMap: "29",
+    name: "Siege of Dalaran",
+    descripcion:
+      "Espacio para compartir ideas de mapas y mecánicas en torno a Dalaran.",
+    imgUrl: "https://www.hiveworkshop.com/media/siege-dalaran.142222/full",
+    downloader: "—",
   },
   {
-    idOtherMap: "9",
-    name: "Blazing Tundra",
-    descripcion: "Un paisaje gélido con fuego oculto.",
-    imgUrl: "https://www.hiveworkshop.com/media/yumapath-png.142210/full",
-  },
-  {
-    idOtherMap: "10",
-    name: "Sky Temple",
-    descripcion: "Templo flotante entre las nubes.",
-    imgUrl: "https://www.hiveworkshop.com/media/worgen-lineup-png.142199/full",
-  },
-  {
-    idOtherMap: "11",
-    name: "Ashen Valley",
-    descripcion: "Valle cubierto de ceniza volcánica.",
-    imgUrl: "https://www.hiveworkshop.com/media/worgen-lineup-png.142199/full",
-  },
-  {
-    idOtherMap: "12",
-    name: "Crimson Arena",
-    descripcion: "Combates a muerte en la arena sangrienta.",
-    imgUrl:
-      "https://www.hiveworkshop.com/media/qq%E5%9B%BE%E7%89%8720250529212046-png.142195/full",
-  },
-  {
-    idOtherMap: "13",
-    name: "Twilight Marsh",
-    descripcion: "Pantano iluminado por luces místicas.",
-    imgUrl:
-      "https://epicwar.s3.eu-central-003.backblazeb2.com/mapimages/1397/355388.jpg",
-  },
-  {
-    idOtherMap: "14",
-    name: "Stormwatch Tower",
-    descripcion: "Torre abandonada bajo una tormenta eterna.",
-    imgUrl:
-      "https://epicwar.s3.eu-central-003.backblazeb2.com/mapimages/1390/355284.jpg",
-  },
-  {
-    idOtherMap: "15",
-    name: "Hollow Mountain",
-    descripcion: "Misterios dentro de una montaña hueca.",
-    imgUrl:
-      "https://epicwar.s3.eu-central-003.backblazeb2.com/mapimages/1389/355274.jpg",
-  },
-  {
-    idOtherMap: "16",
-    name: "Emerald Plains",
-    descripcion: "Campos verdes llenos de emboscadas.",
-    imgUrl:
-      "https://epicwar.s3.eu-central-003.backblazeb2.com/mapimages/1385/355229.jpg",
+    idOtherMap: "30",
+    name: "La Gran Guerra",
+    descripcion: "Campaña que reinventa Warcraft II: Orcos vs Humanos.",
+    imgUrl: "https://www.hiveworkshop.com/media/la-gran-guerra.142222/full",
+    downloader: "—",
   },
 ];
 const page_size = 5;

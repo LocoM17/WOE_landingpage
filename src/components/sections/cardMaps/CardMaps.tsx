@@ -26,7 +26,7 @@ function CardMaps({}: Props) {
     md: 2,
     lg: 3,
     xl: 4,
-    "2xl": 5,
+    // "2xl": 4,
   });
   return (
     <Box
@@ -67,7 +67,7 @@ function CardMaps({}: Props) {
         >
           <SimpleGrid
             columns={colums}
-            spacing={6}
+            spacing={20}
             maxW={"100%"}
             mx={"30px"}
             px={4}

@@ -90,26 +90,35 @@ export default function Footer() {
               © 2025 WORLD OF EDITORS OFICIAL. Todos los derechos reservados
             </Text>
             <Stack direction={"row"} spacing={6}>
-              <SocialButton label={"Discord"} href={"#"}>
+              <SocialButton
+                label={"Discord"}
+                href={"https://discord.com/invite/qZ77ymj"}
+              >
                 <FaDiscord />
               </SocialButton>
-              <SocialButton label={"YouTube"} href={"#"}>
+              <SocialButton
+                label={"YouTube"}
+                href={"https://www.youtube.com/@WorldOfEditorsOficial"}
+              >
                 <FaYoutube />
               </SocialButton>
-              <SocialButton label={"Foro"} href={"#"}>
+              <SocialButton
+                label={"Foro"}
+                href={"https://worldofeditors.foroactivo.com/"}
+              >
                 <MdForum />
               </SocialButton>
             </Stack>
           </Stack>
           <Stack align={"flex-start"}>
             <ListHeader>Comunidad</ListHeader>
-            <Box as="a" href={"#"}>
+            <Box as="a" href={"https://discord.com/invite/qZ77ymj"}>
               Discord
             </Box>
-            <Box as="a" href={"#"}>
+            <Box as="a" href={"https://www.youtube.com/@WorldOfEditorsOficial"}>
               YouTube
             </Box>
-            <Box as="a" href={"#"}>
+            <Box as="a" href={"https://worldofeditors.foroactivo.com/"}>
               Foro
             </Box>
           </Stack>

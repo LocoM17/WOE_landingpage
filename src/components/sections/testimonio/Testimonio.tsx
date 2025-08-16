@@ -5,11 +5,13 @@ import {
   Container,
   Flex,
   Heading,
+  SimpleGrid,
   Stack,
   Text,
+  useBreakpointValue,
   useColorModeValue,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 
 type Props = {
   children: React.ReactNode;
@@ -94,10 +96,10 @@ const TestimonialAvatar = ({
         src={src}
         mb={2}
         size={{
-          base: "md",
+          base: "sm",
           md: "md",
-          lg: "2xl",
-          "2xl": "2xl",
+          lg: "lg",
+          "2xl": "xl",
         }}
       />
       <Stack spacing={-1} align={"center"}>
@@ -112,32 +114,41 @@ const TestimonialAvatar = ({
 
 export default function Testimonio() {
   const { themeStyle } = useTheme();
+  const [opacidad, setOpacidad] = useState(0.1);
+  const colums = useBreakpointValue({
+    base: 1, // 0px
+    sm: 1, // ~480px. em is a relative unit and is dependant on the font size.
+    md: 2, // ~768px
+    lg: 2, // ~992px
+    xl: 3, // ~1280px
+    "2xl": 3, // ~1536px
+  });
 
   return (
     <Box
-      bg={"#121214"}
-      w={"100vw"}
+      // bg={"#0000ddff"}
       px={"50px"}
       pt={"120px"}
       justifyItems={"center"}
       pb={"150px"}
+      mb={"80px"}
     >
       <Stack
         spacing={0}
         align={"center"}
         paddingBottom={{
           base: "1rem",
-          md: "2rem",
-          lg: "4rem",
-          xl: "6rem",
-          "2xl": "10rem",
+          md: "4rem",
+          lg: "3rem",
+          xl: "4rem",
+          "2xl": "5rem",
         }}
       >
         <Heading
           textAlign={"center"}
           fontSize={{
-            base: "2rem",
-            md: "3rem",
+            base: "1.5rem",
+            md: "2rem",
           }}
           color={themeStyle.Cl_titulo2}
         >
@@ -147,70 +158,95 @@ export default function Testimonio() {
           pt={"15px"}
           textAlign={"center"}
           fontSize={{
-            base: "0.99rem",
-            md: "1.5rem",
+            base: "0.90rem",
+            md: "1.1rem",
           }}
         >
           Opiniones auténticas de los miembros más valorados sobre lo que hace
           especial a nuestra comunidad.
         </Text>
       </Stack>
-      <Stack
-        direction={{ base: "column", md: "row" }}
-        spacing={{ base: 10, md: 4, lg: 100 }}
+      <SimpleGrid
+        templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
+        columns={colums}
+        gap={6}
+        maxW={"100%"}
+        pb={"100px"}
       >
-        {[1, 2, 3, 4].map((d) => (
-          <Box h={"400px"} maxW={"sm"}>
+        {[1, 2, 3].map((d) => (
+          <Box
+            key={d}
+            display={"flex"}
+            alignItems={"center"}
+            h={"400px"}
+            maxW={"sm"}
+            p={"16px"}
+          >
             <Testimonial>
               <TestimonialContent>
-                <TestimonialHeading>Efficient Collaborating</TestimonialHeading>
+                <TestimonialHeading>
+                  <Text fontSize={"18px"}>Efficient Collaborating</Text>
+                </TestimonialHeading>
                 <TestimonialText>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Auctor neque sed imperdiet nibh lectus feugiat nunc sem. Lorem
-                  ipsum dolor sit amet, consectetur adipiscing elit. Auctor
-                  neque sed imperdiet nibh lectus feugiat nunc sem.
+                  <Text fontSize={"14px"}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Auctor neque sed imperdiet nibh lectus feugiat nunc sem.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Auctor neque sed imperdiet nibh lectus feugiat nunc sem.
+                  </Text>
                 </TestimonialText>
               </TestimonialContent>
-
               <TestimonialAvatar
-                src={"../../public/img/Leforyer.jpg"}
-                name={"Leforyer"}
-                title={"Moderador de la comunidad"}
+                src={"../../public/img/Gerhalt.jpg"}
+                name={"Usuario"}
+                title={"Roll"}
               />
             </Testimonial>
           </Box>
         ))}
-        {/* <Testimonial>
-            <TestimonialContent>
-              <TestimonialHeading>Intuitive Design</TestimonialHeading>
-              <TestimonialText>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
-                neque sed imperdiet nibh lectus feugiat nunc sem.
-              </TestimonialText>
-            </TestimonialContent>
-            <TestimonialAvatar
-              src={"../../public/img/Gerhalt.jpg"}
-              name={"Gerhard"}
-              title={"Fundador de la comunidad"}
-            />
-          </Testimonial>
-          <Testimonial>
-            <TestimonialContent>
-              <TestimonialHeading>Mindblowing Service</TestimonialHeading>
-              <TestimonialText>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
-                neque sed imperdiet nibh lectus feugiat nunc sem.
-              </TestimonialText>
-            </TestimonialContent>
-            <TestimonialAvatar
-              src={
-                "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
-              }
-              name={"Ruke"}
-              title={"Administrador del servidor"}
-            />
-          </Testimonial> */}
-      </Stack>
+      </SimpleGrid>
+      <SimpleGrid
+        templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
+        gap={6}
+        columns={colums}
+        row={1}
+        opacity={opacidad}
+        transition="opacity 0.3s ease-in-out"
+        onMouseEnter={() => setOpacidad(1)}
+        // _hover={{ opacity: 1 }}
+      >
+        {[4, 5, 6].map((d) => (
+          <Box
+            key={d}
+            display={"flex"}
+            alignItems={"center"}
+            h={"400px"}
+            maxW={"sm"}
+            p={"16px"}
+          >
+            <Testimonial>
+              <TestimonialContent>
+                <TestimonialHeading>
+                  <Text fontSize={"18px"}>Efficient Collaborating</Text>
+                </TestimonialHeading>
+                <TestimonialText>
+                  <Text fontSize={"14px"}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Auctor neque sed imperdiet nibh lectus feugiat nunc sem.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Auctor neque sed imperdiet nibh lectus feugiat nunc sem.
+                  </Text>
+                </TestimonialText>
+              </TestimonialContent>
+              <TestimonialAvatar
+                src={"../../public/img/Gerhalt.jpg"}
+                name={"Usuario"}
+                title={"Roll"}
+              />
+            </Testimonial>
+          </Box>
+        ))}
+      </SimpleGrid>
     </Box>
   );
 }

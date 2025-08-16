@@ -8,7 +8,7 @@ import {
 } from "@chakra-ui/react";
 // import { NavItem } from "../../interface/MapData.ts"; // Importa la interfaz NavItem
 import DesktopSubNav from "./DesktopSubNav.tsx";
-import { NavItem } from "./NavItem.ts";
+import { NavItem } from "./interface/NavItem.ts";
 
 function DesktopNav() {
   const linkColor = useColorModeValue("gray.400", "gray.200");
@@ -67,17 +67,11 @@ function DesktopNav() {
           href: "#infoPilaresComunidad",
         },
         {
-          label: "Comentarios ",
-          subLabel: "See top designers, handpicked by us",
-          href: "#infoComentarios",
+          label: "Desarrollador de la Web",
+          subLabel: "Informacion del creador de la pagina web",
+          href: "#infoDesarrollador",
         },
       ],
-    },
-
-    //cuarto elemento
-    {
-      label: "Desarrollador de la Web",
-      href: "#infoDesarrollador",
     },
   ];
 

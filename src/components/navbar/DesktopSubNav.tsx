@@ -7,7 +7,7 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { NavItem } from "./NavItem";
+import { NavItem } from "./interface/NavItem";
 
 /// Componente que representa un elemento de navegación en el escritorio
 function DesktopSubNav({ label, href, subLabel }: NavItem) {

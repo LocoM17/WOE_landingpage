@@ -24,7 +24,7 @@ import DesktopNav from "./DesktopNav";
 import { useTheme } from "../../context/themes/MyThemeContext";
 import { useRef } from "react";
 import MobileNav from "./MobileNav";
-import { NavItem } from "./NavItem";
+import { NavItem } from "./interface/NavItem";
 
 type Props = {};
 export default function Navbar({}: Props) {
@@ -86,17 +86,11 @@ export default function Navbar({}: Props) {
           href: "#infoPilaresComunidad",
         },
         {
-          label: "Comentarios ",
-          subLabel: "See top designers, handpicked by us",
-          href: "#infoComentarios",
+          label: "Desarrollador de la Web",
+          subLabel: "Informacion del creador de la pagina web",
+          href: "#infoDesarrollador",
         },
       ],
-    },
-
-    //cuarto elemento
-    {
-      label: "Desarrollador de la Web",
-      href: "#infoDesarrollador",
     },
   ];
   return (
@@ -147,7 +141,7 @@ export default function Navbar({}: Props) {
                   objectFit="contain"
                 />
                 <Text fontSize={"2xl"} fontWeight={"normal"} color={"white"}>
-                  World Of Editors Oficial
+                  World Of Editors Oficiallll
                 </Text>
               </Box>
             </a>
@@ -188,7 +182,11 @@ export default function Navbar({}: Props) {
       >
         <DrawerOverlay />
         <DrawerContent bg={themeStyle.bg_general1}>
-          <DrawerCloseButton />
+          <DrawerCloseButton
+            color="white"
+            bg={"blackAlpha.500"}
+            _hover={{ bg: "red.500" }}
+          />
           <DrawerBody mt={10}>
             <Stack spacing={4}>
               {/* Menú Mobile (solo visible cuando isOpen es true) */}

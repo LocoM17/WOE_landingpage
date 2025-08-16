@@ -19,14 +19,23 @@ function OtherProjects() {
   } = useDataMapOther();
   const { cardWidth, pageSize } = UseDataMapOtherPageSize();
   const flatData_local = data?.pages.flat() || [];
-
+  const [totalResponsive, setTotalResponsive] = useState(5);
   const [pageIndex, setPageIndex] = useState(0);
   const [waitingForNextPage, setWaitingForNextPage] = useState(false);
   const [contadorElementos, setContadorElementos] = useState(pageSize);
 
   const totalSlideWidth = (cardWidth + gap) * pageSize;
   const offsetX = -pageIndex * totalSlideWidth;
-  console.log("dados locales cargados: " + flatData_local.length);
+  // console.log("dados locales cargados: " + flatData_local.length);
+
+  // "es este useeffect controlamos el "TotalResponsive" en base a al tamaño de la pagina actual, para que en el boton se desabilite al tener una cantidad =>" contadorElementos + (totalResponsive == 1 ? 0 : 1) >= totalAvailable "=> para desactivar esto se tiene que cumplir"
+  useEffect(() => {
+    if (pageSize <= 1) {
+      setTotalResponsive(pageSize + 1);
+    } else {
+      setTotalResponsive(pageSize - 1);
+    }
+  }, [pageSize]);
 
   useEffect(() => {
     if (flatData_local.length === 0 && hasNextPage && !isFetchingNextPage) {
@@ -45,9 +54,13 @@ function OtherProjects() {
       }
     }
   }, [flatData_local.length, waitingForNextPage, pageIndex]);
+  console.log(contadorElementos);
+  console.log(totalAvailable);
 
   const handleNext = () => {
     const nextIndex = pageIndex + 1;
+    // console.log(flatData_local.length);
+    // console.log(totalAvailable);
 
     if (flatData_local.length >= totalAvailable) {
       setContadorElementos(contadorElementos + pageSize);
@@ -60,7 +73,7 @@ function OtherProjects() {
   };
 
   const handlePrev = () => {
-    if (pageIndex > 0 && contadorElementos <= totalAvailable + pageSize) {
+    if (pageIndex > 0 && contadorElementos <= totalAvailable + pageSize + 5) {
       setContadorElementos(
         contadorElementos <= pageSize ? pageSize : contadorElementos - pageSize
       );
@@ -126,6 +139,8 @@ function OtherProjects() {
             overflow="hidden"
             maxW={"1800px"}
             justifyContent={"center"}
+            pl={"50px"}
+            pr={"50px"}
           >
             <Button
               onClick={handlePrev}
@@ -144,7 +159,7 @@ function OtherProjects() {
               {/* 255+16 */}
               <MotionBox
                 animate={{ x: offsetX }}
-                transition={{ duration: 2.5 }}
+                transition={{ duration: 0.7 }}
                 display="flex"
                 gap={`${gap}px`}
                 position="absolute"
@@ -163,7 +178,12 @@ function OtherProjects() {
 
             <Button
               onClick={handleNext}
-              isDisabled={contadorElementos >= totalAvailable}
+              isDisabled={
+                contadorElementos + (totalResponsive == 1 ? 0 : 1) >
+                totalAvailable
+                  ? true
+                  : false
+              }
             >
               Más
             </Button>

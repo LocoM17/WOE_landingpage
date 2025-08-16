@@ -26,6 +26,7 @@ export function Layout() {
       minH="100vh"
       scrollSnapType="y mandatory"
       css={{ scrollBehavior: "smooth" }}
+      width="100vw"
     >
       {/* Header */}
       <Box as="header" bg="blue.900">

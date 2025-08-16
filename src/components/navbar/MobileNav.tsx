@@ -8,7 +8,8 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
-import { NavItem } from "./NavItem";
+import { NavItem } from "./interface/NavItem";
+import { themes } from "@/context/themes/themes";
 
 export default function MobileNav({ navItems }: { navItems: Array<NavItem> }) {
   return (
@@ -37,8 +38,11 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
           href={href ?? "#"}
           fontWeight={600}
           color="white"
-          _hover={{ color: "teal.300" }}
-          fontSize={"2xl"}
+          _hover={{
+            color: themes.interfazColor.Cl_titulo2,
+          }}
+          // _hover={{ color: "teal.300" }}
+          fontSize={{ base: "1rem" }}
         >
           {label}
         </Box>
@@ -47,6 +51,10 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         {children && (
           <Box onClick={onToggle} cursor="pointer">
             <ChevronDownIcon
+              bg={themes.interfazColor.Cl_titulo2}
+              borderRadius={"sm"}
+              h={"1.5rem"}
+              w={"1.5rem"}
               transform={isOpen ? "rotate(180deg)" : "rotate(0deg)"}
               transition="transform 0.2s ease"
               color="white"
@@ -73,8 +81,8 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
                 as="a"
                 key={child.label}
                 href={child.href}
-                color="gray.300"
-                _hover={{ color: "teal.200" }}
+                color="white"
+                _hover={{ color: themes.interfazColor.Cl_titulo2 }}
               >
                 {child.label}
               </Box>
