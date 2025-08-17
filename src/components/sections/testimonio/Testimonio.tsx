@@ -166,7 +166,41 @@ export default function Testimonio() {
           especial a nuestra comunidad.
         </Text>
       </Stack>
-      <SimpleGrid
+      <Flex wrap={"wrap"} justifyContent={"center"} gap={6}>
+        {[1, 2, 3, 4, 5, 6].map((item, idx) => (
+          <Box
+            key={idx}
+            flex={"1 1 300px"}
+            maxW={"sm"}
+            p={"16px"}
+            display={"flex"}
+            alignItems={"center"}
+            h={"400px"}
+          >
+            <Testimonial>
+              <TestimonialContent>
+                <TestimonialHeading>
+                  <Text fontSize={"18px"}>Efficient Collaborating</Text>
+                </TestimonialHeading>
+                <TestimonialText>
+                  <Text fontSize={"14px"}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Auctor neque sed imperdiet nibh lectus feugiat nunc sem.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Auctor neque sed imperdiet nibh lectus feugiat nunc sem.
+                  </Text>
+                </TestimonialText>
+              </TestimonialContent>
+              <TestimonialAvatar
+                src={"../../public/img/Gerhalt.jpg"}
+                name={"Usuario"}
+                title={"Roll"}
+              />
+            </Testimonial>
+          </Box>
+        ))}
+      </Flex>
+      {/* <SimpleGrid
         templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
         columns={colums}
         gap={6}
@@ -205,48 +239,7 @@ export default function Testimonio() {
           </Box>
         ))}
       </SimpleGrid>
-      <SimpleGrid
-        templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
-        gap={6}
-        columns={colums}
-        row={1}
-        opacity={opacidad}
-        transition="opacity 0.3s ease-in-out"
-        onMouseEnter={() => setOpacidad(1)}
-        // _hover={{ opacity: 1 }}
-      >
-        {[4, 5, 6].map((d) => (
-          <Box
-            key={d}
-            display={"flex"}
-            alignItems={"center"}
-            h={"400px"}
-            maxW={"sm"}
-            p={"16px"}
-          >
-            <Testimonial>
-              <TestimonialContent>
-                <TestimonialHeading>
-                  <Text fontSize={"18px"}>Efficient Collaborating</Text>
-                </TestimonialHeading>
-                <TestimonialText>
-                  <Text fontSize={"14px"}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Auctor neque sed imperdiet nibh lectus feugiat nunc sem.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Auctor neque sed imperdiet nibh lectus feugiat nunc sem.
-                  </Text>
-                </TestimonialText>
-              </TestimonialContent>
-              <TestimonialAvatar
-                src={"../../public/img/Gerhalt.jpg"}
-                name={"Usuario"}
-                title={"Roll"}
-              />
-            </Testimonial>
-          </Box>
-        ))}
-      </SimpleGrid>
+      */}
     </Box>
   );
 }
