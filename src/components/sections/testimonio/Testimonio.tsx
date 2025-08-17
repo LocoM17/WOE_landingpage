@@ -1,3 +1,5 @@
+import { MotionBox } from "@/components/preloader/MotionBox";
+
 import { useTheme } from "@/context/themes/MyThemeContext";
 import {
   Avatar,
@@ -11,7 +13,9 @@ import {
   useBreakpointValue,
   useColorModeValue,
 } from "@chakra-ui/react";
+
 import React, { useState } from "react";
+import { AnimatedItem } from "./AnimatedItem";
 
 type Props = {
   children: React.ReactNode;
@@ -168,36 +172,41 @@ export default function Testimonio() {
       </Stack>
       <Flex wrap={"wrap"} justifyContent={"center"} gap={6}>
         {[1, 2, 3, 4, 5, 6].map((item, idx) => (
-          <Box
+          <MotionBox
             key={idx}
-            flex={"1 1 300px"}
-            maxW={"sm"}
-            p={"16px"}
-            display={"flex"}
-            alignItems={"center"}
-            h={"400px"}
+            flex="1 1 300px"
+            maxW="sm"
+            p="16px"
+            h="400px"
+            display="flex"
+            alignItems="center"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: idx * 0.1 }}
           >
-            <Testimonial>
-              <TestimonialContent>
-                <TestimonialHeading>
-                  <Text fontSize={"18px"}>Efficient Collaborating</Text>
-                </TestimonialHeading>
-                <TestimonialText>
-                  <Text fontSize={"14px"}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Auctor neque sed imperdiet nibh lectus feugiat nunc sem.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Auctor neque sed imperdiet nibh lectus feugiat nunc sem.
-                  </Text>
-                </TestimonialText>
-              </TestimonialContent>
-              <TestimonialAvatar
-                src={"../../public/img/Gerhalt.jpg"}
-                name={"Usuario"}
-                title={"Roll"}
-              />
-            </Testimonial>
-          </Box>
+            <AnimatedItem idx={idx}>
+              <Testimonial>
+                <TestimonialContent>
+                  <TestimonialHeading>
+                    <Text fontSize={"18px"}>Efficient Collaborating{item}</Text>
+                  </TestimonialHeading>
+                  <TestimonialText>
+                    <Text fontSize={"14px"}>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Auctor neque sed imperdiet nibh lectus feugiat nunc sem.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Auctor neque sed imperdiet nibh lectus feugiat nunc sem.
+                    </Text>
+                  </TestimonialText>
+                </TestimonialContent>
+                <TestimonialAvatar
+                  src={"../../public/img/Gerhalt.jpg"}
+                  name={"Usuario"}
+                  title={"Roll"}
+                />
+              </Testimonial>
+            </AnimatedItem>
+          </MotionBox>
         ))}
       </Flex>
       {/* <SimpleGrid
