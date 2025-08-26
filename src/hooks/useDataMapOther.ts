@@ -14,14 +14,16 @@ const dataMapRaw: MapData[] = [
     name: "LuchaDeHeroes",
     descripcion:
       "Battle Royale sin habilidades iniciales, obtenidas mediante ítems en el mapa.",
-    imgUrl: "https://www.hiveworkshop.com/media/lucha-de-heroes.142222/full",
+    imgUrl:
+      "https://wow.zamimg.com/uploads/screenshots/normal/875707.jpg?maxWidth=1050",
     downloader: "—",
   },
   {
     idOtherMap: "22",
     name: "Panda Wars",
     descripcion: "Hero Arena rápido y sin balance ambientado en un mapa 32x32.",
-    imgUrl: "https://www.hiveworkshop.com/media/panda-wars.142222/full",
+    imgUrl:
+      "https://wow.zamimg.com/uploads/screenshots/normal/875707.jpg?maxWidth=1050",
     downloader: "—",
   },
   {
@@ -29,7 +31,8 @@ const dataMapRaw: MapData[] = [
     name: "Pulpines Party - Proyecto WOE",
     descripcion:
       "Espacio de conversación y desarrollo de ideas dentro del ecosistema WOE.",
-    imgUrl: "https://www.hiveworkshop.com/media/pulpines-party.142222/full",
+    imgUrl:
+      "https://wow.zamimg.com/uploads/screenshots/normal/875707.jpg?maxWidth=1050",
     downloader: "—",
   },
   {
@@ -37,7 +40,8 @@ const dataMapRaw: MapData[] = [
     name: "MortalCraft",
     descripcion:
       "Mapa estilo AoS/Hero Arena con enfoque en combate entre héroes.",
-    imgUrl: "https://www.hiveworkshop.com/media/mortalcraft.142222/full",
+    imgUrl:
+      "https://wow.zamimg.com/uploads/screenshots/normal/875707.jpg?maxWidth=1050",
     downloader: "—",
   },
   {
@@ -45,21 +49,24 @@ const dataMapRaw: MapData[] = [
     name: "CASTLE INVASION (RPG)",
     descripcion:
       "Dungeon RPG estilo WarChaser con modos singleplayer y multiplayer.",
-    imgUrl: "https://www.hiveworkshop.com/media/castle-invasion.142222/full",
+    imgUrl:
+      "https://wow.zamimg.com/uploads/screenshots/normal/875707.jpg?maxWidth=1050",
     downloader: "—",
   },
   {
     idOtherMap: "26",
     name: "Caravana del Vacío (beta)",
     descripcion: "Campaña en desarrollo con enfoque narrativo y exploración.",
-    imgUrl: "https://www.hiveworkshop.com/media/caravana-del-vacio.142222/full",
+    imgUrl:
+      "https://wow.zamimg.com/uploads/screenshots/normal/875707.jpg?maxWidth=1050",
     downloader: "—",
   },
   {
     idOtherMap: "28",
     name: "Village Protectors (VP)",
     descripcion: "Hero Defense / Supervivencia con mecánicas cooperativas.",
-    imgUrl: "https://www.hiveworkshop.com/media/village-protectors.142222/full",
+    imgUrl:
+      "https://wow.zamimg.com/uploads/screenshots/normal/875707.jpg?maxWidth=1050",
     downloader: "—",
   },
   {
@@ -67,14 +74,16 @@ const dataMapRaw: MapData[] = [
     name: "Siege of Dalaran",
     descripcion:
       "Espacio para compartir ideas de mapas y mecánicas en torno a Dalaran.",
-    imgUrl: "https://www.hiveworkshop.com/media/siege-dalaran.142222/full",
+    imgUrl:
+      "https://wow.zamimg.com/uploads/screenshots/normal/875707.jpg?maxWidth=1050",
     downloader: "—",
   },
   {
     idOtherMap: "30",
     name: "La Gran Guerra",
     descripcion: "Campaña que reinventa Warcraft II: Orcos vs Humanos.",
-    imgUrl: "https://www.hiveworkshop.com/media/la-gran-guerra.142222/full",
+    imgUrl:
+      "https://wow.zamimg.com/uploads/screenshots/normal/875707.jpg?maxWidth=1050",
     downloader: "—",
   },
 ];

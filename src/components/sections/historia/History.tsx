@@ -5,13 +5,10 @@ import {
   Text,
   Button,
   Stack,
-  Grid,
   Image,
   useBreakpointValue,
-  Flex,
 } from "@chakra-ui/react";
 
-import heroimage1 from "@/../public/img/Historia.png";
 import { useTheme } from "@/context/themes/MyThemeContext";
 import { useState } from "react";
 
@@ -22,21 +19,21 @@ export default function History() {
 
   const timelineImage = [
     {
-      src: "@/../../../../../public/img/Foro del 2012.png",
+      src: "https://i.ibb.co/CKQ4r8yx/Foro-del-2012.png",
       label: "2012/2013 - Nacimiento",
       estado: false,
       descipcion:
         "Mucho antes de Discord, World of Editors nació como un foro clásico fundado por Ruke, un lugar donde la comunidad compartía mapas, resolvía dudas y aprendía junta. Restaurado por Lordsheshe en 2013, conservó el estilo de los foros antiguos —posiblemente desde 2011— y se convirtió en un punto de encuentro para creadores de toda Hispanoamérica.En esa época no existían las facilidades actuales: los chats eran limitados, los recursos se ocultaban tras comentarios, y registrarse no era tan simple como hacer clic en (Iniciar sesión con Google). Pero eso obligaba a muchos a participar, y más de uno terminó quedándose. Aunque gran parte de esos usuarios se perdió con el tiempo, dejaron su huella.Gracias a figuras como Gadooflion y Lordsheshe, el foro sobrevivió incluso cuando estuvo a punto de cerrarse. Lo que comenzó como un simple sitio para descargar herramientas, se convirtió en el corazón de una comunidad que sigue viva hasta hoy. ",
     },
     {
-      src: "@/../../../../../public/img/Foro_actual.png",
+      src: "https://i.ibb.co/XfLBcCtV/Foro-actual.png",
       label: "2016 - Expansión",
       estado: false,
       descipcion:
         "Esta versión del foro fue una morada más estructurada y visualmente cuidada, inspirada en el estilo de 2014 con una estética fría. Aunque su actualización nunca se completó del todo, fue un periodo clave para la comunidad. Se implementaron roles y recompensas visibles que reconocían las contribuciones de los usuarios. También se organizaron concursos, siendo el de Bosses el más recordado. Durante esta etapa, Kadakash propuso la idea de abrir un canal de YouTube; aunque solo subió algunos tutoriales, Zharko terminó aportando la mayoría de los videos. Juntos, impulsaron también la creación del servidor de Discord, abriendo así una nueva etapa para World of Editors.",
     },
     {
-      src: "@/../../../../../public/img/servidorPage1.png",
+      src: "https://i.ibb.co/gMkTm6bV/servidor-Page1.png",
       label: "2024 - actualidad",
       estado: false,
       descipcion:
@@ -67,7 +64,7 @@ export default function History() {
         id="infoHistoria"
         w={"full"}
         position={"relative"}
-        bgImage={heroimage1}
+        bgImage={"https://i.ibb.co/wNg0f96z/Historia.png"}
         backgroundSize="cover"
         bgPos={"center"}
         bgRepeat={"no-repeat"}
