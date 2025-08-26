@@ -10,7 +10,6 @@ import {
   createIcon,
   useBreakpointValue,
 } from "@chakra-ui/react";
-import heroimage1 from "../../../../public/img/hero2.jpg";
 import { useTheme } from "@/context/themes/MyThemeContext";
 
 export default function Hero() {
@@ -37,7 +36,7 @@ export default function Hero() {
         // bg={"#0e0e10"}
         maxW={"100vw"}
         py={paddingY}
-        bgImage={heroimage1}
+        bgImage={"https://i.ibb.co/k2ZbtrnN/hero2.jpg"}
         backgroundPosition={bgPosition}
         backgroundSize={bgSize}
         backgroundRepeat="no-repeat"

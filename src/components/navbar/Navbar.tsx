@@ -1,5 +1,4 @@
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
-import logoimg from "../../../public/img/channels4_profile_canal_sinfondo.png"; // Importa la imagen del logo
 import {
   Box,
   Button,
@@ -146,7 +145,9 @@ export default function Navbar({}: Props) {
               <a href="#infoHeader">
                 <Box display={"flex"} alignItems={"center"}>
                   <Image
-                    src={logoimg}
+                    src={
+                      "https://i.ibb.co/Ng7BrCPL/channels4-profile-canal-sinfondo.png"
+                    }
                     alt="Logo"
                     boxSize="60px"
                     objectFit="contain"
