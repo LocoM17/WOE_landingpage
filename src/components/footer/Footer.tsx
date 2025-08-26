@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Box,
   chakra,
@@ -8,16 +6,12 @@ import {
   Stack,
   Text,
   VisuallyHidden,
-  Input,
-  IconButton,
   useColorModeValue,
   Img,
 } from "@chakra-ui/react";
 import { ReactNode } from "react";
 import { MdForum } from "react-icons/md";
-import { FaInstagram, FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa";
-import { BiMailSend } from "react-icons/bi";
-import iconfooter from "../../../public/img/channels4_profile_canal_icon.png"; // Importa la imagen del logo
+import { FaYoutube, FaDiscord } from "react-icons/fa";
 import { useTheme } from "@/context/themes/MyThemeContext";
 import CreditModal from "../CreditModal";
 
@@ -78,7 +72,9 @@ export default function Footer() {
           <Stack spacing={6}>
             <Box display={"flex"} alignItems={"center"} gap={2}>
               <Img
-                src={iconfooter}
+                src={
+                  "https://i.ibb.co/Rkcrp5wS/channels4-profile-canal-icon.png"
+                }
                 alt="Logo"
                 boxSize="30px"
                 objectFit="contain"
