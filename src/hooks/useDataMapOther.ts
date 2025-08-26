@@ -106,7 +106,7 @@ export default function useDataMapOther() {
     },
   });
 
-  const flatData = query.data?.pages.flat() || [];
+  // const flatData = query.data?.pages.flat() || [];
   // const totalCount = flatData.length;
 
   return {
