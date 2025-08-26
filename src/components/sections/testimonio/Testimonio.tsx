@@ -16,6 +16,9 @@ import {
 
 import React, { useState } from "react";
 import { AnimatedItem } from "./AnimatedItem";
+import UseTextSize from "@/hooks/UseTextSize";
+import { relative } from "path";
+import { Pilares } from "./TestimonioData";
 
 type Props = {
   children: React.ReactNode;
@@ -117,8 +120,10 @@ const TestimonialAvatar = ({
 };
 
 export default function Testimonio() {
+  const { SectionTitleSize, SectionDescriptionSize } = UseTextSize();
   const { themeStyle } = useTheme();
   const [opacidad, setOpacidad] = useState(0.1);
+
   const colums = useBreakpointValue({
     base: 1, // 0px
     sm: 1, // ~480px. em is a relative unit and is dependant on the font size.
@@ -129,87 +134,120 @@ export default function Testimonio() {
   });
 
   return (
-    <Box
-      // bg={"#0000ddff"}
-      px={"50px"}
-      pt={"120px"}
-      justifyItems={"center"}
-      pb={"150px"}
-      mb={"80px"}
-    >
-      <Stack
-        spacing={0}
-        align={"center"}
-        paddingBottom={{
-          base: "1rem",
-          md: "4rem",
-          lg: "3rem",
-          xl: "4rem",
-          "2xl": "5rem",
+    <>
+      <Box
+        opacity={0.5}
+        borderTop={"20px solid"}
+        borderBlockEnd={"20px solid"}
+        sx={{
+          borderImage:
+            "url('https://worldofeditors.net/img/marco.webp')20 round",
         }}
+      />
+      <Box
+        // bg={"#0000ddff"}
+        px={{
+          base: "30px",
+          md: "150px",
+        }}
+        pt={"120px"}
+        justifyItems={"center"}
+        pb={"150px"}
+        mb={"80px"}
       >
-        <Heading
-          textAlign={"center"}
-          fontSize={{
-            base: "1.5rem",
-            md: "2rem",
-          }}
-          color={themeStyle.Cl_titulo2}
-        >
-          Pilares de la comunidad
-        </Heading>
-        <Text
-          pt={"15px"}
-          textAlign={"center"}
-          fontSize={{
-            base: "0.90rem",
-            md: "1.1rem",
+        <Stack
+          spacing={0}
+          align={"center"}
+          paddingBottom={{
+            base: "1rem",
+            md: "4rem",
+            lg: "3rem",
+            xl: "4rem",
+            "2xl": "5rem",
           }}
         >
-          Opiniones auténticas de los miembros más valorados sobre lo que hace
-          especial a nuestra comunidad.
-        </Text>
-      </Stack>
-      <Flex wrap={"wrap"} justifyContent={"center"} gap={6}>
-        {[1, 2, 3, 4, 5, 6].map((item, idx) => (
-          <MotionBox
-            key={idx}
-            flex="1 1 300px"
-            maxW="sm"
-            p="16px"
-            h="400px"
-            display="flex"
-            alignItems="center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: idx * 0.1 }}
+          <Heading
+            textAlign={"center"}
+            fontSize={{
+              base: "1.5rem",
+              md: "2rem",
+            }}
+            color={themeStyle.Cl_titulo2}
           >
-            <AnimatedItem idx={idx}>
-              <Testimonial>
-                <TestimonialContent>
-                  <TestimonialHeading>
-                    <Text fontSize={"18px"}>Efficient Collaborating{item}</Text>
-                  </TestimonialHeading>
-                  <TestimonialText>
-                    <Text fontSize={"14px"}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Auctor neque sed imperdiet nibh lectus feugiat nunc sem.
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Auctor neque sed imperdiet nibh lectus feugiat nunc sem.
-                    </Text>
-                  </TestimonialText>
-                </TestimonialContent>
-                <TestimonialAvatar
-                  src={"../../public/img/Gerhalt.jpg"}
-                  name={"Usuario"}
-                  title={"Roll"}
-                />
-              </Testimonial>
-            </AnimatedItem>
-          </MotionBox>
-        ))}
-      </Flex>
-      {/* <SimpleGrid
+            <Text fontSize={SectionTitleSize}>Pilares de la comunidad</Text>
+          </Heading>
+          <Text
+            pt={"15px"}
+            textAlign={"center"}
+            fontSize={SectionDescriptionSize}
+          >
+            Opiniones auténticas de los miembros más valorados sobre lo que hace
+            especial a nuestra comunidad.
+          </Text>
+        </Stack>
+        <Box display={"flex"} justifyContent={"center"} h={"100%"}>
+          <Flex
+            wrap={"wrap"}
+            // align={"center"}
+            justifyContent={"center"}
+            // content="center"
+            // justifyItems={"center"}
+            // alignItems="center"
+            // justifyContent={"center"}
+            // alignContent={"center"}
+            // justifyItems={"center"}
+            gap={5}
+            // px={5}
+            // mb={30}
+            // h={"100%"}
+            w={{
+              base: "100%",
+              // md: "70%",
+              // lg: "70%",
+              xl: "85%",
+              "2xl": "75%",
+            }}
+            // bgColor={"green"}
+          >
+            {Pilares.map((item, idx) => (
+              <MotionBox
+                key={idx}
+                flex="1 1 300px"
+                maxW="sm"
+                px="16px"
+                my={"26px"}
+                // pb="16px"
+                pb="10px"
+                display="flex"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: idx * 0.1 }}
+                // bgColor={"red"}
+              >
+                <AnimatedItem idx={idx}>
+                  <Testimonial>
+                    <TestimonialContent>
+                      <TestimonialHeading>
+                        <Text fontSize={"18px"}>{item.usuario?.name}</Text>
+                      </TestimonialHeading>
+
+                      <TestimonialText>
+                        {item.opinion ||
+                          "“Desde que integré este modelo, la ambientación de mi                        proyecto ganó una nueva profundidad. La estética gótica,                        los detalles en la armadura y la postura imponente lo                        convierten en un eje narrativo. No solo embellece, sinoque sugiere historia, conflicto y propósito. Es unrecurso que inspira a construir más allá del gameplay.”"}
+                      </TestimonialText>
+                    </TestimonialContent>
+                    <TestimonialAvatar
+                      src={item.usuario?.perfilIcon || ""}
+                      name={item.usuario?.name || ""}
+                      title={item.roll || "Roll"}
+                    />
+                  </Testimonial>
+                </AnimatedItem>
+              </MotionBox>
+            ))}
+          </Flex>
+        </Box>
+        {/* <SimpleGrid
         templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
         columns={colums}
         gap={6}
@@ -249,6 +287,7 @@ export default function Testimonio() {
         ))}
       </SimpleGrid>
       */}
-    </Box>
+      </Box>
+    </>
   );
 }

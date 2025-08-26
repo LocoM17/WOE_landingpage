@@ -1,5 +1,6 @@
 import { useTheme } from "@/context/themes/MyThemeContext";
 import UseDataMapOtherPageSize from "@/hooks/UseDataMapOtherPageSize";
+import UseTextSize from "@/hooks/UseTextSize";
 import useDataMapOther from "@/hooks/useDataMapOther";
 import { Box, Button, Heading, Img, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
@@ -22,11 +23,20 @@ function OtherProjects() {
   const [totalResponsive, setTotalResponsive] = useState(5);
   const [pageIndex, setPageIndex] = useState(0);
   const [waitingForNextPage, setWaitingForNextPage] = useState(false);
-  const [contadorElementos, setContadorElementos] = useState(pageSize);
+  const tamaño = pageSize;
+  const [contadorElementos, setContadorElementos] = useState(0);
+  const { SectionTitleSize, SectionDescriptionSize } = UseTextSize();
 
   const totalSlideWidth = (cardWidth + gap) * pageSize;
   const offsetX = -pageIndex * totalSlideWidth;
   // console.log("dados locales cargados: " + flatData_local.length);
+
+  useEffect(() => {
+    if (pageSize > 0) {
+      setContadorElementos(pageSize);
+      console.log("tamaño de pagina" + contadorElementos);
+    }
+  }, [pageSize]);
 
   // "es este useeffect controlamos el "TotalResponsive" en base a al tamaño de la pagina actual, para que en el boton se desabilite al tener una cantidad =>" contadorElementos + (totalResponsive == 1 ? 0 : 1) >= totalAvailable "=> para desactivar esto se tiene que cumplir"
   useEffect(() => {
@@ -54,8 +64,10 @@ function OtherProjects() {
       }
     }
   }, [flatData_local.length, waitingForNextPage, pageIndex]);
-  console.log(contadorElementos);
-  console.log(totalAvailable);
+  // console.log("total: " + totalAvailable);
+  // console.log("TamañoLista: " + pageSize);
+  // console.log("longitudRenderizada: " + flatData_local.length);
+  // console.log("ContadorElementos: " + contadorElementos);
 
   const handleNext = () => {
     const nextIndex = pageIndex + 1;
@@ -65,18 +77,20 @@ function OtherProjects() {
     if (flatData_local.length >= totalAvailable) {
       setContadorElementos(contadorElementos + pageSize);
       setPageIndex(nextIndex);
+      // console.log("aumentando indice");
     } else if (hasNextPage && !isFetchingNextPage) {
+      // console.log("aumentando contadorElementos");
       setContadorElementos(contadorElementos + pageSize);
       setWaitingForNextPage(true);
       fetchNextPage();
     }
+    // console.log("ContadorElementos nex: " + contadorElementos);
   };
 
   const handlePrev = () => {
     if (pageIndex > 0 && contadorElementos <= totalAvailable + pageSize + 5) {
-      setContadorElementos(
-        contadorElementos <= pageSize ? pageSize : contadorElementos - pageSize
-      );
+      setContadorElementos(contadorElementos - pageSize);
+      // console.log("ContadorElementos prev: " + contadorElementos);
 
       setPageIndex((prev) => prev - 1);
     }
@@ -84,7 +98,32 @@ function OtherProjects() {
 
   return (
     <>
-      <Box id="infoOtrosMapas">
+      <Box
+        borderTop={"20px solid"}
+        borderBlockEnd={"20px solid"}
+        sx={{
+          borderImage:
+            "url('https://worldofeditors.net/img/marco.webp')20 round",
+        }}
+      />
+      <Box
+        position="absolute"
+        // top={0}
+        left={0}
+        width="100vw"
+        height="100vh"
+        backgroundImage='url("/img/mapaDeGuerra.png")'
+        backgroundSize="cover"
+        backgroundPosition="center"
+        backgroundRepeat="no-repeat"
+        opacity={0.19}
+        // zIndex={-1}
+        style={{
+          WebkitMaskImage: "linear-gradient(to top, transparent, black)",
+          maskImage: "linear-gradient(to top, transparent, black)",
+        }}
+      />
+      <Box id="infoOtrosMapas" height="100vh">
         {/* header */}
         <Box
           display={"flex"}
@@ -95,6 +134,7 @@ function OtherProjects() {
           gap={"15px"}
           px={"50px"}
           pb={"100px"}
+
           // h={{ lg: "400px", md: "300px", base: "200px" }}
         >
           <Heading
@@ -102,22 +142,14 @@ function OtherProjects() {
             justifyContent={"center"}
             color={themeStyle.Cl_titulo2}
           >
-            Otros mapas de la comunidad
+            <Text fontSize={SectionTitleSize}>OTROS MAPAS DE LA COMUNIDAD</Text>
           </Heading>
           <Text
             color={themeStyle.Cl_textDescriotion1}
-            fontSize={{
-              base: "xs",
-              sm: "small ",
-              md: "lg",
-              lg: "xl",
-              xl: "2xl",
-            }}
+            fontSize={SectionDescriptionSize}
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quae
-            ex ut, sed quis quasi tenetur.dolor sit amet consectetur adipisicing
-            elit. Eaque quae ex ut, sed quis quasi tenetur.dolor sit amet
-            consectetur adipisicing elit. Eaque quae ex ut, sed quis quasi
+            Los otros mapas hechos hasta el momento por la comunidad, muchos de
+            estos estan en desarrollo o culminados.
           </Text>
         </Box>
         {/* carrusel */}
@@ -146,7 +178,7 @@ function OtherProjects() {
               onClick={handlePrev}
               isDisabled={pageIndex === 0 || isFetchingPreviousPage}
             >
-              Anterior
+              {"<"}
             </Button>
 
             <Box
@@ -178,14 +210,9 @@ function OtherProjects() {
 
             <Button
               onClick={handleNext}
-              isDisabled={
-                contadorElementos + (totalResponsive == 1 ? 0 : 1) >
-                totalAvailable
-                  ? true
-                  : false
-              }
+              isDisabled={contadorElementos >= totalAvailable ? true : false}
             >
-              Más
+              {">"}
             </Button>
           </Box>
         </Box>

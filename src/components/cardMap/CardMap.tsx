@@ -15,6 +15,8 @@ interface MapaInterface {
 }
 
 export default function CardMap({ details }: MapaInterface) {
+  console.log(details);
+
   return (
     <Box
       className={styles.card}
@@ -28,7 +30,7 @@ export default function CardMap({ details }: MapaInterface) {
       >
         <Box className={styles.imgcontededor}>
           <Image
-            src={details.Media.image1}
+            src={details.Media[0]?.url}
             alt="Poster"
             // objectFit={"cover"}
             // w={"full"}
@@ -90,30 +92,31 @@ export default function CardMap({ details }: MapaInterface) {
           display={"flex"}
           flexDir={{ md: "row" }}
           gap={4}
-          alignItems={"center"}
-          justifyContent={"center"}
+          // alignItems={"center"}
+          // justifyContent={"center"}
+          p={3}
         >
           <Box mt={6}>
-            {[details.creador1, details.creador2, details.creador3]
-              .filter((creador) => creador?.name)
+            {[details.autores[0], details.autores[1], details.autores[2]]
+              .filter((creador) => creador?.autor.name)
               .map((creador) =>
-                creador.name ? (
+                creador.autor.name ? (
                   <Stack
-                    key={creador.name}
+                    key={creador.autor.name}
                     direction={"row"}
                     spacing={4}
                     align={"center"}
                   >
                     <Avatar
                       boxSize={"36px"}
-                      src={creador.perfilIcon} // Cambia esto por la URL de tu imagen
+                      src={creador.autor.perfilIcon} // Cambia esto por la URL de tu imagen
                     />
                     <Stack direction={"column"} spacing={0} fontSize={"sm"}>
                       <Text fontWeight={600} color={"white"}>
-                        {creador.name}
+                        {creador.autor.name}
                       </Text>
                       <Text fontSize={"12px"} color={"gray.500"}>
-                        {creador.information}
+                        {creador.autorType}
                       </Text>
                     </Stack>
                   </Stack>

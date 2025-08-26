@@ -2,37 +2,35 @@
   {
     "mapId": "1b3b",
     "mapName": "Battle Units Arena",
-    "description": " Un mapa enfocado en el juego en equipo y la coordinación. Los héroes se pueden personalizar con distintas combinaciones de habilidades. Cada arena ofrece misiones únicas, y el objetivo es sumar la mayor cantidad de puntos, ya sea eliminando héroes o completando misiones del escenario. ",
+    "description": "Un mapa enfocado en el juego en equipo y la coordinación. Los héroes se pueden personalizar con distintas combinaciones de habilidades. Cada arena ofrece misiones únicas, y el objetivo es sumar la mayor cantidad de puntos, ya sea eliminando héroes o completando misiones del escenario.",
     "mapType": "custom",
+    "origin": "Hive",
+    "PlayersMax": "12",
+    "downloadLink": "https://www.hiveworkshop.com/threads/battle-units-arena.359746/",
+    "Media": [
+      { "tipo": "imagen", "url": "https://i.ibb.co/VWpsbjC6/BUA-img03.png" }
+    ],
+    "autores": [
+      {
+        "autor": {
+          "name": "Leforyer",
+          "information": "Creador del mapa",
+          "perfilIcon": "https://ibb.co/jvsM41VB"
+        },
+        "autorType": "creador"
+      },
+      {
+        "autor": {
+          "name": "Gerhalt",
+          "information": "Cocreador",
+          "perfilIcon": "../../public/img/Gerhalt.jpg"
+        },
+        "autorType": "cocreador"
+      }
+    ],
     "versionGame": {
       "grafico": "clasic",
       "version": "(1.27 - actual)"
-    },
-    "PlayersMax": "12",
-    "downloadLink": "https://www.hiveworkshop.com/threads/battle-units-arena.359746/",
-    "Media": {
-      "image1": "https://i.ibb.co/VWpsbjC6/BUA-img03.png",
-      "image2": "",
-      "image3": "",
-      "image4": "",
-      "gif1": "",
-      "gif2": "",
-      "linkVideo": ""
-    },
-    "creador1": {
-      "name": "Leforyer",
-      "information": "Creador del mapa",
-      "perfilIcon": "../../public/img/Leforyer.jpg"
-    },
-    "creador2": {
-      "name": "Gerhalt",
-      "information": "Cocreador",
-      "perfilIcon": "../../public/img/Gerhalt.jpg"
-    },
-    "creador3": {
-      "name": "",
-      "information": "",
-      "perfilIcon": ""
     }
   },
   {
@@ -40,72 +38,63 @@
     "mapName": "Freddy Krueger Escape",
     "description": "Un mapa multijugador de horror en el que 10 víctimas deben sobrevivir en una pesadilla. Elige entre distintos roles como Freddy, víctima o cadáver reanimado. Se juega en una mansión dentro del mundo de los sueños, con modos y mecánicas que fomentan el suspenso y la cooperación.",
     "mapType": "Survival Horror",
+    "origin": "Hive",
+    "PlayersMax": "12",
+    "downloadLink": "https://www.hiveworkshop.com/threads/freddy-krueger-escape-2-10f.331498/",
+    "Media": [
+      {
+        "tipo": "imagen",
+        "url": "https://i.ibb.co/kswrXVry/FKE-captura-1.png"
+      },
+      { "tipo": "imagen", "url": "https://imgur.com/a/9QEowLX" }
+    ],
+    "autores": [
+      {
+        "autor": {
+          "name": "Kadakash",
+          "information": "Creador del mapa",
+          "perfilIcon": "https://i.ibb.co/ym8Q1pQw/mCGT9TR.jpg"
+        },
+        "autorType": "creador"
+      },
+      {
+        "autor": {
+          "name": "GhxBronie",
+          "information": "Cocreador",
+          "perfilIcon": "https://i.ibb.co/JWsBhZmH/Zharko.png"
+        },
+        "autorType": "cocreador"
+      }
+    ],
     "versionGame": {
       "grafico": "clasic",
       "version": "(1.27 - actual)"
-    },
-    "PlayersMax": "12",
-    "downloadLink": "https://www.hiveworkshop.com/threads/freddy-krueger-escape-2-10f.331498/",
-    "Media": {
-      "image1": "https://i.ibb.co/kswrXVry/FKE-captura-1.png",
-      "image2": "https://imgur.com/a/9QEowLX",
-      "image3": "",
-      "image4": "",
-      "gif1": "",
-      "gif2": "",
-      "linkVideo": ""
-    },
-    "creador1": {
-      "name": "Kadakash",
-      "information": "Creador del mapa",
-      "perfilIcon": "https://i.ibb.co/ym8Q1pQw/mCGT9TR.jpg"
-    },
-    "creador2": {
-      "name": "GhxBronie",
-      "information": "Cocreador",
-      "perfilIcon": "https://i.ibb.co/JWsBhZmH/Zharko.png"
-    },
-    "creador3": {
-      "name": "",
-      "information": "",
-      "perfilIcon": ""
     }
   },
-
   {
     "mapId": "3",
     "mapName": "Capture the Flag SC2",
     "description": "Mapa temático de Starcraft donde los jugadores capturan la bandera y la llevan a su base. Cada Marine puede aprender y mejorar habilidades o atributos usando Talentos, que se desbloquean al lograr capturas globales, asegurando combates equilibrados y sin desventajas.",
     "mapType": "Arena(Capturar la Bandera)",
+    "origin": "Hive",
+    "PlayersMax": "10",
+    "downloadLink": "https://www.hiveworkshop.com/threads/capture-the-flag-sc2-2-7.254009/",
+    "Media": [
+      { "tipo": "imagen", "url": "https://i.ibb.co/ZpMWqqpq/CTF-3.png" }
+    ],
+    "autores": [
+      {
+        "autor": {
+          "name": "GhxBronie",
+          "information": "Creador del mapa",
+          "perfilIcon": "https://i.ibb.co/JWsBhZmH/Zharko.png"
+        },
+        "autorType": "creador"
+      }
+    ],
     "versionGame": {
       "grafico": "clasic",
       "version": "(1.27 - actual)"
-    },
-    "PlayersMax": "10",
-    "downloadLink": "https://www.hiveworkshop.com/threads/capture-the-flag-sc2-2-7.254009/",
-    "Media": {
-      "image1": "https://i.ibb.co/ZpMWqqpq/CTF-3.png",
-      "image2": "",
-      "image3": "",
-      "image4": "",
-      "gif1": "",
-      "gif2": "",
-      "linkVideo": ""
-    },
-    "creador1": {
-      "name": "GhxBronie",
-      "information": "Creador del mapa",
-      "perfilIcon": "https://i.ibb.co/JWsBhZmH/Zharko.png"
-    },
-    "creador2": {
-      "name": "",
-      "information": "",
-      "perfilIcon": ""
-    },
-    "creador3": {
-      "name": "",
-      "information": "",
-      "perfilIcon": ""
     }
   },
   {
@@ -113,36 +102,33 @@
     "mapName": "Beyond the CFB Legacy",
     "description": "Mapa donde los jugadores eligen entre 168 personajes, algunos originales y otros basados en referencias populares, para cumplir el objetivo acordado. Si tu personaje muere, debes elegir otro para seguir luchando y lograr la victoria.",
     "mapType": "Arena de Héroe PVP",
+    "origin": "Hive",
+    "PlayersMax": "6",
+    "downloadLink": "https://www.hiveworkshop.com/threads/crazy-f-battle-1-4-ai-not-reforged.322263/",
+    "Media": [
+      { "tipo": "imagen", "url": "https://i.ibb.co/9HST8v9c/CFB-A11.jpg" }
+    ],
+    "autores": [
+      {
+        "autor": {
+          "name": "Karnwield",
+          "information": "Creador del mapa",
+          "perfilIcon": "https://i.ibb.co/5XkWrcSH/Karnwield.png"
+        },
+        "autorType": "creador"
+      },
+      {
+        "autor": {
+          "name": "GhxBronie",
+          "information": "Cocreador y Rework",
+          "perfilIcon": "https://i.ibb.co/JWsBhZmH/Zharko.png"
+        },
+        "autorType": "cocreador"
+      }
+    ],
     "versionGame": {
       "grafico": "clasic",
       "version": "(1.27 - actual)"
-    },
-
-    "PlayersMax": "6",
-    "downloadLink": "https://www.hiveworkshop.com/threads/crazy-f-battle-1-4-ai-not-reforged.322263/",
-    "Media": {
-      "image1": "https://i.ibb.co/9HST8v9c/CFB-A11.jpg",
-      "image2": "",
-      "image3": "",
-      "image4": "",
-      "gif1": "",
-      "gif2": "",
-      "linkVideo": ""
-    },
-    "creador1": {
-      "name": "Karnwield",
-      "information": "Creador del mapa",
-      "perfilIcon": "https://i.ibb.co/5XkWrcSH/Karnwield.png  "
-    },
-    "creador2": {
-      "name": "GhxBronie",
-      "information": "Cocreador y Rework",
-      "perfilIcon": "https://i.ibb.co/JWsBhZmH/Zharko.png"
-    },
-    "creador3": {
-      "name": "",
-      "information": "",
-      "perfilIcon": ""
     }
   }
 ]

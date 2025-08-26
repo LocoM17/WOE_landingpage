@@ -94,109 +94,118 @@ export default function Navbar({}: Props) {
     },
   ];
   return (
-    <Box>
-      <Flex
-        zIndex={101}
-        position="fixed"
-        top="0"
-        left="0"
-        right="0"
-        bg={themeStyle.bg_general1}
-        color={useColorModeValue("gray.600", "white")}
-        minH={"60px"}
-        py={{ base: 2 }}
-        px={{ base: 4 }}
-        borderBottom={1}
-        borderStyle={"solid"}
-        borderColor={useColorModeValue("gray.200", "gray.900")}
-        align={"center"}
-      >
-        {/* Botón de menú solo visible en móviles */}
+    <>
+      <Box
+        opacity={0.5}
+        // borderRadius={"15px"}
+        borderBottom={"10px solid"}
+        sx={{
+          borderColor: "red",
+          borderImage:
+            "url('https://worldofeditors.net/img/marco.webp')20 round",
+        }}
+      />
+      <Box>
         <Flex
-          flex={{ base: 1, md: "auto" }}
-          ml={{ base: -2 }}
-          display={{ base: "flex", md: "none" }}
+          zIndex={101}
+          position="fixed"
+          top="0"
+          left="0"
+          right="0"
+          bg={themeStyle.bg_general1}
+          color={useColorModeValue("gray.600", "white")}
+          minH={"60px"}
+          py={{ base: 2 }}
+          px={{ base: 4 }}
+          borderBottom={2}
+          borderStyle={"solid"}
+          borderColor={useColorModeValue("black.100", "black")}
+          align={"center"}
         >
-          <IconButton
-            ref={btnRef}
-            onClick={onOpen}
-            icon={<HamburgerIcon w={5} h={5} />}
-            variant={"ghost"}
-            aria-label={"Toggle Navigation"}
-            backgroundColor={themeStyle.Cl_titulo2}
-            _hover={{ backgroundColor: themeStyle.Cl_titulo1 }}
-          />
-        </Flex>
-
-        {/* Logo y Título */}
-        <Flex align="center" justify="space-between" w="100%">
-          {/* IZQUIERDA: Logo */}
-          <Box display="flex" alignItems="center">
-            <a href="#infoHeader">
-              <Box display={"flex"} alignItems={"center"}>
-                <Image
-                  src={logoimg}
-                  alt="Logo"
-                  boxSize="60px"
-                  objectFit="contain"
-                />
-                <Text fontSize={"2xl"} fontWeight={"normal"} color={"white"}>
-                  World Of Editors Oficiallll
-                </Text>
-              </Box>
-            </a>
-          </Box>
-
-          {/* CENTRO: Nav solo en desktop */}
-          <Flex display={{ base: "none", md: "flex" }} ml={10}>
-            <DesktopNav />
-          </Flex>
-
-          {/* DERECHA: Botón hamburguesa solo en móvil */}
-          <Flex display={{ base: "flex", md: "none" }}>
+          {/* Botón de menú solo visible en móviles */}
+          {/* <Flex
+            flex={{ base: 1, md: "auto" }}
+            ml={{ base: -2 }}
+            display={{ base: "flex", md: "none" }}
+          >
             <IconButton
-              onClick={onToggle}
-              icon={
-                isOpen ? (
-                  <CloseIcon w={3} h={3} />
-                ) : (
-                  <HamburgerIcon w={5} h={5} />
-                )
-              }
-              variant="ghost"
-              aria-label="Toggle Navigation"
+              ref={btnRef}
+              onClick={onOpen}
+              icon={<HamburgerIcon w={5} h={5} />}
+              variant={"ghost"}
+              aria-label={"Toggle Navigation"}
+              backgroundColor={themeStyle.Cl_titulo2}
+              _hover={{ backgroundColor: themeStyle.Cl_titulo1 }}
             />
+          </Flex> */}
+
+          {/* Logo y Título */}
+          <Flex align="center" justify="space-between" w="100%">
+            {/* IZQUIERDA: Logo */}
+            <Box display="flex" alignItems="center">
+              <a href="#infoHeader">
+                <Box display={"flex"} alignItems={"center"}>
+                  <Image
+                    src={logoimg}
+                    alt="Logo"
+                    boxSize="60px"
+                    objectFit="contain"
+                  />
+                  <Text fontSize={"2xl"} fontWeight={"normal"} color={"white"}>
+                    World Of Editors Oficiallll
+                  </Text>
+                </Box>
+              </a>
+            </Box>
+
+            {/* CENTRO: Nav solo en desktop */}
+            <Flex display={{ base: "none", md: "flex" }} ml={10}>
+              <DesktopNav />
+            </Flex>
+
+            {/* DERECHA: Botón hamburguesa solo en móvil */}
+            <Flex display={{ base: "flex", md: "none" }}>
+              <IconButton
+                ref={btnRef}
+                onClick={onOpen}
+                icon={<HamburgerIcon w={5} h={5} />}
+                variant={"ghost"}
+                aria-label={"Toggle Navigation"}
+                backgroundColor={themeStyle.Cl_titulo2}
+                _hover={{ backgroundColor: themeStyle.Cl_titulo1 }}
+              />
+            </Flex>
           </Flex>
+
+          {/* Acciones a la derecha */}
+          {/* Menú Desktop */}
         </Flex>
 
-        {/* Acciones a la derecha */}
-        {/* Menú Desktop */}
-      </Flex>
-
-      {/* Drawer para mobile nav */}
-      <Drawer
-        isOpen={isOpen}
-        placement="left"
-        onClose={onClose}
-        finalFocusRef={btnRef}
-      >
-        <DrawerOverlay />
-        <DrawerContent bg={themeStyle.bg_general1}>
-          <DrawerCloseButton
-            color="white"
-            bg={"blackAlpha.500"}
-            _hover={{ bg: "red.500" }}
-          />
-          <DrawerBody mt={10}>
-            <Stack spacing={4}>
-              {/* Menú Mobile (solo visible cuando isOpen es true) */}
-              <Collapse in={isOpen} animateOpacity>
-                <MobileNav navItems={NAV_ITEMS} />
-              </Collapse>
-            </Stack>
-          </DrawerBody>
-        </DrawerContent>
-      </Drawer>
-    </Box>
+        {/* Drawer para mobile nav */}
+        <Drawer
+          isOpen={isOpen}
+          placement="left"
+          onClose={onClose}
+          finalFocusRef={btnRef}
+        >
+          <DrawerOverlay />
+          <DrawerContent bg={themeStyle.bg_general1}>
+            <DrawerCloseButton
+              color="white"
+              bg={"blackAlpha.500"}
+              _hover={{ bg: "red.500" }}
+            />
+            <DrawerBody mt={10}>
+              <Stack spacing={4}>
+                {/* Menú Mobile (solo visible cuando isOpen es true) */}
+                <Collapse in={isOpen} animateOpacity>
+                  <MobileNav navItems={NAV_ITEMS} />
+                </Collapse>
+              </Stack>
+            </DrawerBody>
+          </DrawerContent>
+        </Drawer>
+      </Box>
+    </>
   );
 }

@@ -19,6 +19,7 @@ import { FaInstagram, FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa";
 import { BiMailSend } from "react-icons/bi";
 import iconfooter from "../../../public/img/channels4_profile_canal_icon.png"; // Importa la imagen del logo
 import { useTheme } from "@/context/themes/MyThemeContext";
+import CreditModal from "../CreditModal";
 
 const SocialButton = ({
   children,
@@ -124,11 +125,15 @@ export default function Footer() {
           </Stack>
           <Stack align={"flex-start"}>
             <ListHeader>Ayuda</ListHeader>
-            <Box as="a" href={"#"}>
+            <Box
+              as="a"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=locomwoe01@gmail.com&su=ayuda%20o%20consulta%20por%20la%20landingpage"
+            >
               Centro de ayuda
             </Box>
-            <Box as="a" href={"#"}>
-              Terminos y condiciones
+            <Box as="button">
+              {/* Terminos y condiciones */}
+              <CreditModal />
             </Box>
           </Stack>
         </SimpleGrid>

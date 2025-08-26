@@ -1,25 +1,20 @@
-export interface ModelData {
-  nameModel: String;
-  typeModel: String;
-  description: String;
-  downloadLink1: String;
-  downloadLink2: String;
-  media: {
-    img1: String;
-    img2: String;
-    gif1: String;
-    gif2: String;
-    linkVideo1: String;
-    linkVideo2: String;
-  };
-  autores: {
-    autor1: autor;
-    autor2: autor;
-  };
+import { MediaItem } from "./MediaData";
+import { User } from "./UserData";
+
+export interface ModelsData {
+  models: ModelData[];
 }
-interface autor {
-  name: String;
-  information: String;
-  contact1: String;
-  contact2: String;
+export interface ModelData {
+  idModelo: number;
+  nameModel: string;
+  typeModel: "classic" | "reforged";
+  description: string;
+  downloadLink: string;
+  media: MediaItem[];
+  autores: AutorMap[];
+}
+
+export interface AutorMap {
+  autor: User;
+  autorType: "creador" | "cocreador";
 }

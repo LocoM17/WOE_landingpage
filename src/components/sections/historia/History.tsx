@@ -53,6 +53,18 @@ export default function History() {
   return (
     <>
       <Box
+        opacity={0.2}
+        borderTop={"20px solid"}
+        borderBlockEnd={"20px solid"}
+        sx={{
+          borderImage:
+            "url('https://worldofeditors.net/img/marco.webp')20 round",
+        }}
+      />
+      <Box
+        as="section"
+        // mb={8}
+        id="infoHistoria"
         w={"full"}
         position={"relative"}
         bgImage={heroimage1}
@@ -60,6 +72,7 @@ export default function History() {
         bgPos={"center"}
         bgRepeat={"no-repeat"}
         py={{ base: 20, md: 36 }}
+        h={"100vh"}
       >
         <Box
           position="absolute"

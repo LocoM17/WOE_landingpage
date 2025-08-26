@@ -1,32 +1,22 @@
+import { MediaItem } from "./MediaData";
+import { User } from "./UserData";
+
 export interface MapData {
   mapId: string;
   mapName: string;
   description: string;
   mapType: string;
-
+  origin: "Hive" | "Discord" | "ForoWoe" | "Repositorio";
+  PlayersMax: string;
+  downloadLink: string;
+  autores: AutorMap[];
+  Media: MediaItem[];
   versionGame: {
     grafico: string;
     version: string;
   };
-
-  PlayersMax: string;
-  downloadLink: string;
-  Media: {
-    image1: string;
-    image2: string;
-    image3: string;
-    image4: string;
-    gif1: string;
-    gif2: string;
-    linkVideo: string;
-  };
-  creador1: Creator;
-  creador2: Creator;
-  creador3: Creator;
 }
-
-interface Creator {
-  name: string;
-  information: string;
-  perfilIcon: string;
+export interface AutorMap {
+  autor: User;
+  autorType: "creador" | "cocreador";
 }

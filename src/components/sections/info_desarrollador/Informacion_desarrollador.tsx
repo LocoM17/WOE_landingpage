@@ -11,6 +11,7 @@ import {
   StackDivider,
   Icon,
   useColorModeValue,
+  Box,
 } from "@chakra-ui/react";
 import { CgMail } from "react-icons/cg";
 import { FaDiscord } from "react-icons/fa";
@@ -48,45 +49,56 @@ const Feature = ({ text, icon, iconBg }: FeatureProps) => {
 
 export default function Informacion() {
   return (
-    <Container maxW={"5xl"} py={12} h="70vh">
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-        <Stack spacing={4}>
-          <Heading>Mas informacion del Desarrollador</Heading>
-          <Text color={"gray.500"} fontSize={"lg"}>
-            El desarrollador de la pagina es el usuario "LocoM" de la comunidad
-            de World of Editors.
-          </Text>
-          <Stack
-            spacing={6}
-            // divider={
-            //   <StackDivider
-            //     borderColor={useColorModeValue("gray.100", "gray.700")}
-            //   />
-            // }
-          >
-            <Feature
-              icon={<Icon as={CgMail} color={"yellow.500"} w={5} h={5} />}
-              iconBg={useColorModeValue("yellow.100", "yellow.900")}
-              text={"locomwoe01@gmail.com"}
-            />
-            <Feature
-              icon={<Icon as={FaDiscord} color={"white"} w={5} h={5} />}
-              iconBg={useColorModeValue("#5662F6", "blue.900")}
-              text={"locom17"}
-            />
+    <Box
+      display={"flex"}
+      alignContent={"center"}
+      alignItems={"center"}
+      justifyContent={"center"}
+      justifyItems={"center"}
+      px={"20px"}
+    >
+      <Container maxW={"5xl"} py={12} h="70vh" display={"flex"}>
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
+          <Stack spacing={4} justify={"center"}>
+            <Heading>Informacion del Desarrollador</Heading>
+            <Text color={"gray.500"} fontSize={"lg"}>
+              El desarrollador de la pagina es el usuario "LocoM" de la
+              comunidad de World of Editors.
+            </Text>
+            <Stack
+              spacing={6}
+              // divider={
+              //   <StackDivider
+              //     borderColor={useColorModeValue("gray.100", "gray.700")}
+              //   />
+              // }
+            >
+              <Feature
+                icon={<Icon as={CgMail} color={"yellow.500"} w={5} h={5} />}
+                iconBg={useColorModeValue("yellow.100", "yellow.900")}
+                text={"locomwoe01@gmail.com"}
+              />
+              <Feature
+                icon={<Icon as={FaDiscord} color={"white"} w={5} h={5} />}
+                iconBg={useColorModeValue("#5662F6", "blue.900")}
+                text={"locom17"}
+              />
+            </Stack>
           </Stack>
-        </Stack>
-        <Flex>
-          <Image
-            rounded={"md"}
-            alt={"feature image"}
-            src={
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDRahzc4v7TBuuAonfc6M4jQ32DmAXioLei38mNHb3WqtpOXwbP3s-rVd9FsxRuwO7itw&usqp=CAU"
-            }
-            objectFit={"cover"}
-          />
-        </Flex>
-      </SimpleGrid>
-    </Container>
+          <Flex align={"center"} justify={"center"}>
+            <Image
+              w={{
+                sm: "15rem",
+                md: "20rem",
+              }}
+              rounded={"md"}
+              alt={"feature image"}
+              src={"https://i.ibb.co/60HgPFgC/zerglingxd.gif"}
+              objectFit={"cover"}
+            />
+          </Flex>
+        </SimpleGrid>
+      </Container>
+    </Box>
   );
 }
