@@ -37,8 +37,7 @@ function CardMaps({}: Props) {
         borderTop={"20px solid"}
         borderBlockEnd={"20px solid"}
         sx={{
-          borderImage:
-            "url('https://worldofeditors.net/img/marco.webp')20 round",
+          borderImage: "url('https://i.ibb.co/hJ8ytGkq/marco.webp')20 round",
         }}
       />
       <Box
@@ -47,7 +46,7 @@ function CardMaps({}: Props) {
         left={0}
         width="100%"
         height="100vh"
-        backgroundImage='url("/img/Fondo_ROC.png")'
+        backgroundImage='url("https://i.ibb.co/f5qfVLf/Fondo-ROC.jpg")'
         backgroundSize="cover"
         backgroundPosition="center"
         backgroundRepeat="no-repeat"
@@ -69,7 +68,7 @@ function CardMaps({}: Props) {
       >
         <Box textAlign={"center"} p={4}>
           <Heading mb={4} color={themeStyle.Cl_titulo2}>
-            <Text fontSize={SectionTitleSize}>MAPAS DESTACADOS</Text>
+            <Text fontSize={SectionTitleSize}>Mapas Destacados</Text>
           </Heading>
           <Text
             color={"white"}

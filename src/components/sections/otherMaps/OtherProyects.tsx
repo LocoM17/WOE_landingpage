@@ -34,7 +34,7 @@ function OtherProjects() {
   useEffect(() => {
     if (pageSize > 0) {
       setContadorElementos(pageSize);
-      console.log("tamaño de pagina" + contadorElementos);
+      // console.log("tamaño de pagina" + contadorElementos);
     }
   }, [pageSize]);
 
@@ -102,8 +102,7 @@ function OtherProjects() {
         borderTop={"20px solid"}
         borderBlockEnd={"20px solid"}
         sx={{
-          borderImage:
-            "url('https://worldofeditors.net/img/marco.webp')20 round",
+          borderImage: "url('https://i.ibb.co/hJ8ytGkq/marco.webp')20 round",
         }}
       />
       <Box
@@ -112,7 +111,7 @@ function OtherProjects() {
         left={0}
         width="100vw"
         height="100vh"
-        backgroundImage='url("/img/mapaDeGuerra.png")'
+        backgroundImage='url("https://i.ibb.co/W4dc0mTV/mapa-De-Guerra.png")'
         backgroundSize="cover"
         backgroundPosition="center"
         backgroundRepeat="no-repeat"
@@ -133,7 +132,7 @@ function OtherProjects() {
           flexDirection={"column"}
           gap={"15px"}
           px={"50px"}
-          pb={"100px"}
+          pb={"40px"}
 
           // h={{ lg: "400px", md: "300px", base: "200px" }}
         >
@@ -142,7 +141,9 @@ function OtherProjects() {
             justifyContent={"center"}
             color={themeStyle.Cl_titulo2}
           >
-            <Text fontSize={SectionTitleSize}>OTROS MAPAS DE LA COMUNIDAD</Text>
+            <Text fontSize={SectionTitleSize}>
+              Otros mapas en desarrollo de la comunidad
+            </Text>
           </Heading>
           <Text
             color={themeStyle.Cl_textDescriotion1}
@@ -171,8 +172,8 @@ function OtherProjects() {
             overflow="hidden"
             maxW={"1800px"}
             justifyContent={"center"}
-            pl={"50px"}
-            pr={"50px"}
+            // pl={"50px"}
+            // pr={"50px"}
           >
             <Button
               onClick={handlePrev}

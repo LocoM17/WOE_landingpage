@@ -28,12 +28,12 @@ function App({}: Props) {
   }, []);
   return (
     <QueryClientProvider client={queryClient}>
-      {isLoading ? (
-        <MotionBox>
-          <Preloader />
-        </MotionBox>
-      ) : (
-        <ChakraProvider theme={theme}>
+      <ChakraProvider theme={theme}>
+        {isLoading ? (
+          <MotionBox>
+            <Preloader />
+          </MotionBox>
+        ) : (
           <MyThemeProvider>
             <MotionBox
               key="layout"
@@ -47,8 +47,8 @@ function App({}: Props) {
               <Layout />
             </MotionBox>
           </MyThemeProvider>
-        </ChakraProvider>
-      )}
+        )}
+      </ChakraProvider>
     </QueryClientProvider>
   );
 }

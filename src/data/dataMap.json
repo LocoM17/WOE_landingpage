@@ -15,7 +15,7 @@
         "autor": {
           "name": "Leforyer",
           "information": "Creador del mapa",
-          "perfilIcon": "https://ibb.co/jvsM41VB"
+          "perfilIcon": "https://i.ibb.co/SXGnv9QW/Leforyer.png"
         },
         "autorType": "creador"
       },
@@ -23,7 +23,7 @@
         "autor": {
           "name": "Gerhalt",
           "information": "Cocreador",
-          "perfilIcon": "../../public/img/Gerhalt.jpg"
+          "perfilIcon": "https://i.ibb.co/b09Jz0q/Gerhalt.png"
         },
         "autorType": "cocreador"
       }

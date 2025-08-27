@@ -30,12 +30,12 @@ function SectionModelos() {
   return (
     <>
       <Box
+        id="infoModelosComunidad"
         opacity={0.5}
         borderTop={"20px solid"}
         borderBlockEnd={"20px solid"}
         sx={{
-          borderImage:
-            "url('https://worldofeditors.net/img/marco.webp')20 round",
+          borderImage: "url('https://i.ibb.co/hJ8ytGkq/marco.webp')20 round",
         }}
       />
       <Box
@@ -47,7 +47,7 @@ function SectionModelos() {
           sm: "200vh",
           xl: "100vh",
         }}
-        backgroundImage='url("/img/Fondo_ROC.png")'
+        backgroundImage='url("https://i.ibb.co/f5qfVLf/Fondo-ROC.jpg")'
         backgroundSize="cover"
         backgroundPosition="center"
         backgroundRepeat="no-repeat"
@@ -76,10 +76,10 @@ function SectionModelos() {
           <Text
             color={"gray.500"}
             fontSize={{
-              base: "0.9rem",
-              md: "1.1rem",
-              lg: "1.2rem",
-              xl: "1.4rem",
+              base: "1.2rem",
+              md: "1.3rem",
+              lg: "1.4rem",
+              xl: "1.5rem",
             }}
             lineHeight={"tall"}
             align={"center"}
@@ -91,14 +91,11 @@ function SectionModelos() {
         </Stack>
         <SimpleGrid
           columns={{ base: 1, md: 1, lg: 2 }}
-          spacing={10}
-          gap={100}
-          px={
-            {
-              // base: "40px",
-              // md: "80px",
-            }
-          }
+          // spacing={10}
+          gap={10}
+          px={{
+            base: "5px",
+          }}
         >
           <Box display={"flex"} flexDir={"column"} alignItems={"center"}>
             <Heading>

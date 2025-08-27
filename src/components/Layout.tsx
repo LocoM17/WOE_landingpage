@@ -14,7 +14,7 @@ import SectionModelos from "./Modelos/SectionModelos.tsx";
 export function Layout() {
   //colores
   // const { themeStyle } = useTheme();
-
+  console.log(window.getComputedStyle(document.body).backgroundColor);
   return (
     <Box
       as="section"
@@ -99,9 +99,9 @@ export function Layout() {
       />
 
       {/* informacion LocoM */}
-      <Box as="section" id="infoDesarrollador">
-        <Informacion />
-      </Box>
+      {/* <Box as="section" id="infoDesarrollador"> */}
+      <Informacion />
+      {/* </Box> */}
 
       {/* Footer */}
       <Box as="footer">

@@ -56,8 +56,17 @@ export default function Informacion() {
       justifyContent={"center"}
       justifyItems={"center"}
       px={"20px"}
+      h={"100vh"}
+      pb={"200px"}
     >
-      <Container maxW={"5xl"} py={12} h="70vh" display={"flex"}>
+      <Container
+        id="infoDesarrollador"
+        maxW={"5xl"}
+        py={12}
+        h="70vh"
+        display={"flex"}
+        pt={"150px"}
+      >
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
           <Stack spacing={4} justify={"center"}>
             <Heading>Informacion del Desarrollador</Heading>

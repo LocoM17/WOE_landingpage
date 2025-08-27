@@ -67,9 +67,9 @@ export default function Navbar({}: Props) {
           href: "#infoOtrosMapas",
         },
         {
-          label: "Modelos Reforjados",
-          subLabel: "modelos creados para el modo Reforjado",
-          href: "#infoModelosReforjados",
+          label: "Modelos De la comunidad",
+          subLabel: "modelos creados por usuarios de la comunidad",
+          href: "#infoModelosComunidad",
         },
       ],
     },
@@ -81,7 +81,7 @@ export default function Navbar({}: Props) {
       children: [
         {
           label: "Los pilares de la comunidad",
-          subLabel: "Find the perfect designer for your team",
+          subLabel: "Opiniones de los usuarios mas importantes de la comunidad",
           href: "#infoPilaresComunidad",
         },
         {

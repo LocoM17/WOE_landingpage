@@ -66,7 +66,8 @@ export default function CarruselModelos({ modelos }: { modelos: ModelData[] }) {
         overflow={"hidden"}
         // borderRadius={"15px"}
         role="group"
-        p={"30px"}
+        px={"30px"}
+        // mb={0}
         maxW={"600px"}
         // maxW={{ base: "250px", md: "500px", lg: "650px" }}
         minW={{ base: "250px", md: "300px" }}
@@ -133,7 +134,7 @@ export default function CarruselModelos({ modelos }: { modelos: ModelData[] }) {
               // border={"2px solid grey"}
               h={{ md: "500px", lg: "600px" }}
               // h={"100%"}
-              minH={"500px"}
+              // minH={"500px"}
               position="relative"
               backgroundPosition="center"
               backgroundRepeat="no-repeat"

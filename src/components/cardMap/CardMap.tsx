@@ -15,7 +15,7 @@ interface MapaInterface {
 }
 
 export default function CardMap({ details }: MapaInterface) {
-  console.log(details);
+  // console.log(details);
 
   return (
     <Box

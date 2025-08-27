@@ -53,15 +53,14 @@ export default function History() {
         opacity={0.2}
         borderTop={"20px solid"}
         borderBlockEnd={"20px solid"}
+        id="infoHistoria"
         sx={{
-          borderImage:
-            "url('https://worldofeditors.net/img/marco.webp')20 round",
+          borderImage: "url('https://i.ibb.co/hJ8ytGkq/marco.webp')20 round",
         }}
       />
       <Box
         as="section"
         // mb={8}
-        id="infoHistoria"
         w={"full"}
         position={"relative"}
         bgImage={"https://i.ibb.co/wNg0f96z/Historia.png"}
@@ -69,7 +68,7 @@ export default function History() {
         bgPos={"center"}
         bgRepeat={"no-repeat"}
         py={{ base: 20, md: 36 }}
-        h={"100vh"}
+        h={"120vh"}
       >
         <Box
           position="absolute"
@@ -97,7 +96,7 @@ export default function History() {
                   xl: "3rem",
                 }}
               >
-                Historia de la comunidad
+                Historia de la Comunidad
               </Heading>
               <Stack direction={"row"} mt={6} spacing={4} wrap={"wrap"}>
                 {timelineImage.map((item, idx) => (
@@ -134,7 +133,6 @@ export default function History() {
             >
               {timelineImage.map((item, idx) => (
                 <Image
-                  bgColor={"black"}
                   key={idx}
                   src={item.src}
                   alt={item.label}
@@ -142,7 +140,7 @@ export default function History() {
                   w={imageSize}
                   h={"auto"}
                   objectFit="contain"
-                  border="2px solid white"
+                  border="2px solid black"
                   borderRadius="lg"
                   boxShadow="xl"
                   opacity={idx === activeIndex ? 1 : 0}

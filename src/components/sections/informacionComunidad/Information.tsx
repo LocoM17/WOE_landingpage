@@ -50,12 +50,11 @@ export default function Information() {
         borderTop={"20px solid"}
         borderBlockEnd={"20px solid"}
         sx={{
-          borderImage:
-            "url('https://worldofeditors.net/img/marco.webp')20 round",
+          borderImage: "url('https://i.ibb.co/hJ8ytGkq/marco.webp')20 round",
         }}
       />
       <Box
-        pt={"50px"}
+        pt={"80px"}
         id={"infoComunidad"}
         as="section"
         bg={themeStyle.bg_general2}

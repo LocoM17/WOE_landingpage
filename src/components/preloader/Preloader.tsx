@@ -18,7 +18,7 @@ const Preloader = () => {
       zIndex={9999}
     >
       <Image
-        src="@/../../../../public/img/channels4_profile_canal_icon.png"
+        src="https://i.ibb.co/Rkcrp5wS/channels4-profile-canal-icon.png"
         alt="Logo"
         boxSize="120px"
         mb={4}

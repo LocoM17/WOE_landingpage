@@ -140,8 +140,7 @@ export default function Testimonio() {
         borderTop={"20px solid"}
         borderBlockEnd={"20px solid"}
         sx={{
-          borderImage:
-            "url('https://worldofeditors.net/img/marco.webp')20 round",
+          borderImage: "url('https://i.ibb.co/hJ8ytGkq/marco.webp')20 round",
         }}
       />
       <Box

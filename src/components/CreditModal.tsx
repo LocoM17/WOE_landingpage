@@ -23,7 +23,7 @@ function CreditModal() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const dataMapRaw = dataMap as MapData[];
-  console.log(UseCreditos(dataMapRaw, modelosMock.models));
+  // console.log(UseCreditos(dataMapRaw, modelosMock.models));
 
   const ModelsCredits = UseCreditos(dataMapRaw, modelosMock.models).filter(
     (c) => c.context === "model"
