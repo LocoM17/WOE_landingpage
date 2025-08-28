@@ -44,24 +44,24 @@ export default function Carrusel() {
     {
       title: "Directos en vivo",
       text: "Disfruta de los directos de la comunidad.",
-      image: "@/../../../../../public/img/PartidaDirecto_7.png",
+      image: "https://i.ibb.co/5gkvmGQn/Partida-Directo-7.png",
     },
     {
       title: "Edicion de mapas",
       text: "Aprende a diseñar esenarios personalizados.",
       image:
-        "https://cdna.artstation.com/p/assets/images/images/040/202/066/large/sev-llanto-dark-netflix-warcraft-3-reforged-by-sev-llanto-06.jpg?1628158531",
+        "https://i.ibb.co/0yDK2pRj/sev-llanto-dark-netflix-warcraft-3-reforged-by-sev-llanto-06.jpg",
     },
     {
       title: "Modelos personalizados",
       text: "implementacion y creacion de modelos.",
       image:
-        "https://www.hiveworkshop.com/data/ratory-images/282/282330-fbabdc65d7bebfee9df4876c1ab25ccc.png",
+        "https://i.ibb.co/bMHtLhwx/282330-fbabdc65d7bebfee9df4876c1ab25ccc.png",
     },
     {
       title: "El canal de la comunidad",
       text: "Canal de youtube de la comunidad",
-      image: "@/../../../../../public/img/Videos_canal_yt_2.png",
+      image: "https://i.ibb.co/0Sqm6Qv/Videos-canal-yt-2.png",
     },
   ];
 
