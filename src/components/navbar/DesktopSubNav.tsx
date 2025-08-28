@@ -20,7 +20,7 @@ function DesktopSubNav({ label, href, subLabel }: NavItem) {
       display={"block"}
       p={2}
       rounded={"md"}
-      _hover={{ bg: useColorModeValue("#323238", "gray.900") }} // color de fondo al pasar el mouse
+      _hover={{ bg: useColorModeValue("gray.800", "gray.900") }} // color de fondo al pasar el mouse
     >
       <Stack direction={"row"} align={"center"}>
         <Box>

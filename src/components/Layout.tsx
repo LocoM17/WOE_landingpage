@@ -14,7 +14,7 @@ import SectionModelos from "./Modelos/SectionModelos.tsx";
 export function Layout() {
   //colores
   // const { themeStyle } = useTheme();
-  console.log(window.getComputedStyle(document.body).backgroundColor);
+  // console.log(window.getComputedStyle(document.body).backgroundColor);
   return (
     <Box
       as="section"

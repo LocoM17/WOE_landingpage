@@ -104,9 +104,13 @@ export default function History() {
                     key={idx}
                     size={{ base: "xs", md: "xs", lg: "sm" }}
                     variant={"solid"}
-                    colorScheme="blue"
+                    color={"#fff"}
+                    bgColor={"rgba(14, 100, 180, 1)"}
                     onClick={() => (setActiveIndex(idx), setElemento(item))}
                     fontSize={{ base: "xs", md: "xs", lg: "sm" }}
+                    _hover={{
+                      bgColor: "#3c85c9ff",
+                    }}
                   >
                     {item.label}
                   </Button>
@@ -140,7 +144,7 @@ export default function History() {
                   w={imageSize}
                   h={"auto"}
                   objectFit="contain"
-                  border="2px solid black"
+                  border="2px solid #000000ff"
                   borderRadius="lg"
                   boxShadow="xl"
                   opacity={idx === activeIndex ? 1 : 0}

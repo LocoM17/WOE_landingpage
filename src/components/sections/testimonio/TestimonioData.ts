@@ -23,7 +23,16 @@ export const Pilares: Pilar[] = [
     },
     opinion:
       "Recuerdo cuando encontré el canal de WOE: un fan del editor pidiendo que probaran su mapa lleno de bugs. Desde ese día supe que había hallado mi lugar en internet. En la comunidad encontré no solo conocimiento, sino también un grupo con quien compartir el día a día. WOE tiene mi eterno agradecimiento y cariño. Deseo que sigamos creciendo como editores y comunidad, llegando a más personas y disfrutando juntos de WC3.",
-    roll: "Colaborador",
+    roll: "Colaborador del Canal de YouTube",
+  },
+  {
+    usuario: {
+      name: "Gerhalt",
+      perfilIcon: "https://i.ibb.co/b09Jz0q/Gerhalt.png",
+    },
+    opinion:
+      "Es una comunidad de la que aprendí demasiado, unos de los sitios con los que crecí y que en cierta manera me ayudó a encontrar mi camino en la vida en la actualidad. Estoy sorprendido que haya sobrevivido a través de los años y podamos seguir creando cosas y jugándolas.",
+    roll: "Fundador del Foro",
   },
   {
     usuario: {
@@ -32,15 +41,7 @@ export const Pilares: Pilar[] = [
     },
     opinion:
       "Siento orgullo por la comunidad que hemos logrado construir tras tantos años, destacando la paciencia y enfoque que tienen los colaboradores con quienes recién empiezan a diferencia de otras comunidades. Tanto así que cuando alguien logra terminar un mapa, modelo u otro aporte se siente como un logro colectivo.",
-    roll: "Colaborador",
-  },
-  {
-    usuario: {
-      name: "",
-      perfilIcon: "",
-    },
-    opinion: "",
-    roll: "",
+    roll: "Creador del Canal de YouTube",
   },
   {
     usuario: {
@@ -50,14 +51,15 @@ export const Pilares: Pilar[] = [
     },
     opinion:
       "La comunidad de editores latinoamericana existió desde siempre, en WorldEdit.com.ar me ayudaron a aprender. Fui aprendiendo la creación de hechizos, que sería mi foco de diversión a lo largo de todos los años, por entonces es que creamos WorldOfEditors, donde crecimos rápidamente hasta apagarnos por mucho tiempo, gracias a Zharko es que la comunidad ganó nueva vida y le estoy agradecido por ello",
-    roll: "",
+    roll: "Colaborador Principal de la Comunidad",
   },
   {
     usuario: {
-      name: "",
-      perfilIcon: "",
+      name: "GhxBronie",
+      perfilIcon: "https://i.ibb.co/JWsBhZmH/Zharko.png",
     },
-    opinion: "",
-    roll: "",
+    opinion:
+      "un texto cualquiera,un texto cualquiera,un texto cualquiera,un texto cualquiera,un texto cualquiera,un texto cualquiera,un texto cualquiera,un texto cualquiera,un texto cualquiera,un texto cualquiera,un texto cualquiera,un texto cualquiera,un texto cualquiera,un texto cualquiera,un texto cualquiera,",
+    roll: "Colaborador del Canal de YouTube",
   },
 ];

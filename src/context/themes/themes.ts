@@ -8,6 +8,7 @@ export const themes = {
     Cl_titulo1: "#ffae00",
     Cl_titulo2: "#58ADCD",
     Cl_titulo3: "#ffffff",
+    Cl_titulo4: "#0082b1ff",
     Cl_textDescriotion1: "#ffffff",
     Cl_textDescriotion2: "#718096",
     BG_degradados: {

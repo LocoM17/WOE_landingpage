@@ -153,7 +153,7 @@ export default function Navbar({}: Props) {
                     objectFit="contain"
                   />
                   <Text fontSize={"2xl"} fontWeight={"normal"} color={"white"}>
-                    World Of Editors Oficiallll
+                    World Of Editors Oficial
                   </Text>
                 </Box>
               </a>
@@ -172,8 +172,8 @@ export default function Navbar({}: Props) {
                 icon={<HamburgerIcon w={5} h={5} />}
                 variant={"ghost"}
                 aria-label={"Toggle Navigation"}
-                backgroundColor={themeStyle.Cl_titulo2}
-                _hover={{ backgroundColor: themeStyle.Cl_titulo1 }}
+                backgroundColor={themeStyle.Cl_titulo4}
+                _hover={{ backgroundColor: themeStyle.Cl_titulo2 }}
               />
             </Flex>
           </Flex>

@@ -133,6 +133,8 @@ export default function CardMap({ details }: MapaInterface) {
             // h={"100%"}
           >
             <Button
+              bgColor={"#135ea5ff"}
+              color={"#fff"}
               top={30}
               left={0}
               as="a"
@@ -140,6 +142,7 @@ export default function CardMap({ details }: MapaInterface) {
               right={5}
               bottom={8}
               size={"sm"}
+              _hover={{ bgColor: "#316ba1ff" }}
             >
               <Text fontSize={"0.8rem"}>Mas Informacion</Text>
             </Button>

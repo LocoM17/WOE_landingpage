@@ -98,11 +98,11 @@ export default function Hero() {
               href="#infoComunidad"
               h={16}
               w={{ base: "full", sm: "sm" }}
-              colorScheme={"white"}
-              bg={"#125082"}
+              color={"#fff"}
+              bg={"blue.500"}
               fontSize={"lg"}
               _hover={{
-                bg: "#1b6bab",
+                bg: "blue.400",
               }}
             >
               Mas Informacion

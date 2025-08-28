@@ -143,7 +143,6 @@ export default function CarruselModelos({ modelos }: { modelos: ModelData[] }) {
               // borderRadius={"15px"}
               border={"10px solid"}
               sx={{
-                borderColor: "red",
                 borderImage:
                   "url('https://worldofeditors.net/img/marco.webp')20 round",
               }}
@@ -340,7 +339,12 @@ export default function CarruselModelos({ modelos }: { modelos: ModelData[] }) {
                         size={"sm"}
                         w={"140px"}
                         as="a"
+                        bgColor={"#0075a7ff"}
+                        color={"#fff"}
                         href={m.downloadLink}
+                        _hover={{
+                          bgColor: "#0086c0ff",
+                        }}
                       >
                         Mas informacion
                       </Button>

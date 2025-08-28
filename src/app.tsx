@@ -27,8 +27,8 @@ function App({}: Props) {
     return () => clearTimeout(timeout);
   }, []);
   return (
-    <QueryClientProvider client={queryClient}>
-      <ChakraProvider theme={theme}>
+    <ChakraProvider theme={theme}>
+      <QueryClientProvider client={queryClient}>
         {isLoading ? (
           <MotionBox>
             <Preloader />
@@ -48,8 +48,8 @@ function App({}: Props) {
             </MotionBox>
           </MyThemeProvider>
         )}
-      </ChakraProvider>
-    </QueryClientProvider>
+      </QueryClientProvider>
+    </ChakraProvider>
   );
 }
 

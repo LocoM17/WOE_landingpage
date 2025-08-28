@@ -226,9 +226,9 @@ export default function Testimonio() {
                 <AnimatedItem idx={idx}>
                   <Testimonial>
                     <TestimonialContent>
-                      <TestimonialHeading>
+                      {/* <TestimonialHeading>
                         <Text fontSize={"18px"}>{item.usuario?.name}</Text>
-                      </TestimonialHeading>
+                      </TestimonialHeading> */}
 
                       <TestimonialText>
                         {item.opinion ||
