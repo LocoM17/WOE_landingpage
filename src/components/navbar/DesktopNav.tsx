@@ -50,7 +50,7 @@ function DesktopNav() {
         },
         {
           label: "Modelos de la comunidad",
-          subLabel: "modelos creados por usuarios de la comunidad",
+          subLabel: "Modelos creados por la comunidad",
           href: "#infoModelosComunidad",
         },
       ],
