@@ -17,11 +17,11 @@ function DesktopNav() {
     //opciones del navbar
     //primer elemento
     {
-      label: "Informacion Principal",
+      label: "Informacion principal",
       href: "#infoComunidad",
       children: [
         {
-          label: "La comunidad de World of editors",
+          label: "La comunidad de World Of Editors",
           subLabel: "¿Quienes somos?",
           href: "#infoComunidad",
         },
@@ -49,7 +49,7 @@ function DesktopNav() {
           href: "#infoOtrosMapas",
         },
         {
-          label: "Modelos De la comunidad",
+          label: "Modelos de la comunidad",
           subLabel: "modelos creados por usuarios de la comunidad",
           href: "#infoModelosComunidad",
         },

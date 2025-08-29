@@ -35,7 +35,7 @@ export default function Navbar({}: Props) {
     //opciones del sideBar
     //primer elemento
     {
-      label: "Informacion Principal",
+      label: "Informacion principal",
       href: "#infoComunidad",
       children: [
         {
@@ -67,7 +67,7 @@ export default function Navbar({}: Props) {
           href: "#infoOtrosMapas",
         },
         {
-          label: "Modelos De la comunidad",
+          label: "Modelos de la comunidad",
           subLabel: "modelos creados por usuarios de la comunidad",
           href: "#infoModelosComunidad",
         },
