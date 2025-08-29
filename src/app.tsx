@@ -23,7 +23,7 @@ function App({}: Props) {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsLoading(false);
-    }, 3500);
+    }, 5000);
     return () => clearTimeout(timeout);
   }, []);
   return (
