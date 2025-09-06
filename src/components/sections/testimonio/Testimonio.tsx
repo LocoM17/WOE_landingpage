@@ -4,6 +4,7 @@ import { useTheme } from "@/context/themes/MyThemeContext";
 import {
   Avatar,
   Box,
+  Center,
   Container,
   Flex,
   Heading,
@@ -225,16 +226,25 @@ export default function Testimonio() {
               >
                 <AnimatedItem idx={idx}>
                   <Testimonial>
-                    <TestimonialContent>
-                      {/* <TestimonialHeading>
+                    <Box
+                      display={"flex"}
+                      alignItems={"Center"}
+                      h={{
+                        // sm: 280,
+                        // md: 260,
+                        xl: 340,
+                      }}
+                    >
+                      <TestimonialContent>
+                        {/* <TestimonialHeading>
                         <Text fontSize={"18px"}>{item.usuario?.name}</Text>
                       </TestimonialHeading> */}
-
-                      <TestimonialText>
-                        {item.opinion ||
-                          "“Desde que integré este modelo, la ambientación de mi                        proyecto ganó una nueva profundidad. La estética gótica,                        los detalles en la armadura y la postura imponente lo                        convierten en un eje narrativo. No solo embellece, sinoque sugiere historia, conflicto y propósito. Es unrecurso que inspira a construir más allá del gameplay.”"}
-                      </TestimonialText>
-                    </TestimonialContent>
+                        <TestimonialText>
+                          {item.opinion ||
+                            "“Desde que integré este modelo, la ambientación de mi                        proyecto ganó una nueva profundidad. La estética gótica,                        los detalles en la armadura y la postura imponente lo                        convierten en un eje narrativo. No solo embellece, sinoque sugiere historia, conflicto y propósito. Es unrecurso que inspira a construir más allá del gameplay.”"}
+                        </TestimonialText>
+                      </TestimonialContent>
+                    </Box>
                     <TestimonialAvatar
                       src={item.usuario?.perfilIcon || ""}
                       name={item.usuario?.name || ""}

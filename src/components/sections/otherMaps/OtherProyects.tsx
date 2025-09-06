@@ -2,6 +2,7 @@ import { useTheme } from "@/context/themes/MyThemeContext";
 import UseDataMapOtherPageSize from "@/hooks/UseDataMapOtherPageSize";
 import UseTextSize from "@/hooks/UseTextSize";
 import useDataMapOther from "@/hooks/useDataMapOther";
+import { MapData } from "@/interface/MapData";
 import { Box, Button, Heading, Img, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
@@ -30,6 +31,7 @@ function OtherProjects() {
   const totalSlideWidth = (cardWidth + gap) * pageSize;
   const offsetX = -pageIndex * totalSlideWidth;
   // console.log("dados locales cargados: " + flatData_local.length);
+  // console.log(flatData_local);
 
   useEffect(() => {
     if (pageSize > 0) {
@@ -201,7 +203,7 @@ function OtherProjects() {
               >
                 {flatData_local.map((item, idx) => (
                   <CardItem
-                    key={item.idOtherMap || idx}
+                    key={item.mapId || idx}
                     item={item}
                     width={cardWidth}
                   />
@@ -222,7 +224,7 @@ function OtherProjects() {
   );
 }
 
-function CardItem({ item, width }: { item: any; width: number }) {
+function CardItem({ item, width }: { item: MapData; width: number }) {
   return (
     <Box
       w={`${width}px`}
@@ -239,11 +241,31 @@ function CardItem({ item, width }: { item: any; width: number }) {
       transition="all 0.3s ease-in-out"
       p="5px"
     >
+      {/* {item.Media[0]?.tipo === "imagen" ? (
+        <Img
+          w="100%"
+          h="100%"
+          src={item.Media[0]?.url || undefined}
+          alt={item.mapName}
+          objectFit="cover"
+          transition="opacity 0.3s ease-in-out"
+          _hover={{ opacity: 0.2 }}
+        />
+      ) : (
+        <iframe
+          width="100%"
+          height="100%"
+          src={item.Media[0]?.url || undefined}
+        />
+      )} */}
       <Img
         w="100%"
         h="100%"
-        src={item.imgUrl || undefined}
-        alt={item.name}
+        src={
+          item.Media[0]?.url ||
+          "https://wow.zamimg.com/uploads/screenshots/normal/875707.jpg?maxWidth=1050"
+        }
+        alt={item.mapName}
         objectFit="cover"
         transition="opacity 0.3s ease-in-out"
         _hover={{ opacity: 0.2 }}
@@ -266,8 +288,8 @@ function CardItem({ item, width }: { item: any; width: number }) {
         color="white"
         bgGradient="linear(to-b, transparent 20%, rgba(0,0,0,.8) 100%)"
       >
-        <Text>{item.name}</Text>
-        <Text>{item.descripcion}</Text>
+        <Text>{item.mapName}</Text>
+        <Text>{item.description}</Text>
       </Box>
     </Box>
   );

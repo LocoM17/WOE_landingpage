@@ -14,7 +14,7 @@ export const Pilares: Pilar[] = [
         "https://i.ibb.co/bjkdZp70/Captura-de-pantalla-2025-08-26-125716.png",
     },
     opinion:
-      "La comunidad de editores latinoamericana existió desde siempre, en WorldEdit.com.ar me ayudaron a aprender. Fui aprendiendo la creación de hechizos, que sería mi foco de diversión a lo largo de todos los años, por entonces es que creamos WorldOfEditors, donde crecimos rápidamente hasta apagarnos por mucho tiempo, gracias a Zharko es que la comunidad ganó nueva vida y le estoy agradecido por ello",
+      "La comunidad de editores latinoamericana existió desde siempre. En WorldEdit.com.ar fui aprendiendo a crear hechizos, que sería mi foco de diversión a lo largo de todos los años. Por entonces es que creamos WorldOfEditors, donde crecimos rápidamente hasta apagarnos por mucho tiempo. Gracias a Zharko es que la comunidad volvió a cobrar vida y le estoy agradecido por ello.",
     roll: "Colaborador Principal de la Comunidad",
   },
   {
@@ -23,7 +23,7 @@ export const Pilares: Pilar[] = [
       perfilIcon: "https://i.ibb.co/SXGnv9QW/Leforyer.png",
     },
     opinion:
-      "Recuerdo cuando encontré el canal de WOE: un fan del editor pidiendo que probaran su mapa lleno de bugs. Desde ese día supe que había hallado mi lugar en internet. En la comunidad encontré no solo conocimiento, sino también un grupo con quien compartir el día a día. WOE tiene mi eterno agradecimiento y cariño. Deseo que sigamos creciendo como editores y comunidad, llegando a más personas y disfrutando juntos de WC3.",
+      "Recuerdo cuando encontré el canal de WOE: un fan del editor pidiendo que probaran su mapa lleno de bugs. Desde ese día supe que había hallado mi lugar en internet. En la comunidad encontré no solo conocimiento, sino también un grupo con quien compartir el día a día. WOE tiene mi eterno agradecimiento y cariño, y deseo que sigamos creciendo como comunidad, llegando a más personas y disfrutando de WC3.",
     roll: "Colaborador del Canal de YouTube",
   },
   {
@@ -37,11 +37,11 @@ export const Pilares: Pilar[] = [
   },
   {
     usuario: {
-      name: "Sauron",
+      name: "Sauron(Ruke)",
       perfilIcon: "https://i.ibb.co/Zp9xvqZT/30-3.jpg",
     },
     opinion:
-      "habiendo creado la comunidad original siento mucho cariño y un poco de orgullo ya que creo, fuimos (y tal vez seguimos siendo) la comunidad mas grande de latinoamerica. pienso que no podria haber mejor administracion que la actual para continuar con dicho legado. de corazon, les estoy muy agradecido a todos.",
+      "Habiendo creado la comunidad original, siento mucho cariño y un poco de orgullo, pues creo que fuimos (y tal vez aún seamos) la comunidad más grande de Latinoamérica. Pienso que no podría haber mejor administración que la actual para continuar con dicho legado. De corazón, les estoy muy agradecido a todos.",
     roll: "Administrador del servidor",
   },
   {
