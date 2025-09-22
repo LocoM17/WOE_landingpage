@@ -25,9 +25,15 @@ const dataMapRaw: MapData[] = [
         autorType: "creador",
       },
     ],
-    Media: [],
+    Media: [
+      {
+        tipo: "imagen",
+        url: "https://i.ibb.co/Ldjn9C9W/MCImage.png",
+        origen: "mapa",
+      },
+    ],
     versionGame: {
-      grafico: "Creador",
+      grafico: "clasico sd",
       version: "1.27b",
     },
   },
@@ -53,12 +59,12 @@ const dataMapRaw: MapData[] = [
     ],
     Media: [
       {
-        tipo: "video",
-        url: "https://www.youtube.com/watch?v=3sI9m_Lmfws&list=PLmuJxIson9454PBYGAKEU8A53zILe9-om",
+        tipo: "imagen",
+        url: "https://i.ibb.co/kswrXVry/FKE-captura-1.png",
       },
     ],
     versionGame: {
-      grafico: "Creador",
+      grafico: "clasico sd",
       version: "1.27b",
     },
   },
@@ -83,7 +89,7 @@ const dataMapRaw: MapData[] = [
     ],
     Media: [],
     versionGame: {
-      grafico: "Creador",
+      grafico: "clasico sd",
       version: "1.26a ?",
     },
   },
@@ -107,14 +113,9 @@ const dataMapRaw: MapData[] = [
         autorType: "cocreador",
       },
     ],
-    Media: [
-      {
-        tipo: "video",
-        url: "busca en Youtube p",
-      },
-    ],
+    Media: [],
     versionGame: {
-      grafico: "Creador / Cocreador",
+      grafico: "clasico sd / Cocreador",
       version: "1.27b",
     },
   },
@@ -146,7 +147,7 @@ const dataMapRaw: MapData[] = [
       },
     ],
     versionGame: {
-      grafico: "creador",
+      grafico: "clasico sd",
       version: "1.26/actual",
     },
   },
@@ -169,14 +170,9 @@ const dataMapRaw: MapData[] = [
         autorType: "creador",
       },
     ],
-    Media: [
-      {
-        tipo: "video",
-        url: "Temporal: Defense of the Citadel en YouTube",
-      },
-    ],
+    Media: [],
     versionGame: {
-      grafico: "Creador",
+      grafico: "clasico sd",
       version: "Reforged",
     },
   },
@@ -201,7 +197,7 @@ const dataMapRaw: MapData[] = [
     ],
     Media: [],
     versionGame: {
-      grafico: "Creador",
+      grafico: "clasico sd",
       version: "1.27b",
     },
   },
@@ -227,11 +223,11 @@ const dataMapRaw: MapData[] = [
     Media: [
       {
         tipo: "imagen",
-        url: "https://ibb.co/NPdp8sC/MZA%20Ruins",
+        url: "https://i.ibb.co/RmkPx9b/Mapita-En-Desarrollo.png",
       },
     ],
     versionGame: {
-      grafico: "Creador",
+      grafico: "clasico sd",
       version: "1.26a / 1.27b...",
     },
   },
@@ -255,14 +251,9 @@ const dataMapRaw: MapData[] = [
         autorType: "creador",
       },
     ],
-    Media: [
-      {
-        tipo: "video",
-        url: "https://www.youtube.com/watch?v=eo9yvUbK37U",
-      },
-    ],
+    Media: [],
     versionGame: {
-      grafico: "Creador",
+      grafico: "clasico sd",
       version: "Reforged 2.0",
     },
   },
@@ -287,7 +278,7 @@ const dataMapRaw: MapData[] = [
     ],
     Media: [],
     versionGame: {
-      grafico: "Creador",
+      grafico: "clasico sd",
       version: "0.1",
     },
   },
@@ -316,7 +307,7 @@ const dataMapRaw: MapData[] = [
       },
     ],
     versionGame: {
-      grafico: "Creador",
+      grafico: "clasico sd",
       version: "..",
     },
   },
@@ -347,7 +338,7 @@ const dataMapRaw: MapData[] = [
       },
     ],
     versionGame: {
-      grafico: "creador",
+      grafico: "clasico sd",
       version: "1.27/actual",
     },
   },
@@ -379,8 +370,59 @@ const dataMapRaw: MapData[] = [
       },
     ],
     versionGame: {
-      grafico: "creador",
+      grafico: "clasico sd",
       version: "Reforged",
+    },
+  },
+  {
+    mapId: "6",
+    mapName: "Caravana del Vacío",
+    description:
+      "Una campaña de Warcraft 3 tipo mele, dungeon crawler y puzzles",
+    mapType: "Campaña",
+    origin: "Repositorio",
+    PlayersMax: "1",
+    downloadLink:
+      "https://discord.com/channels/721139249289887794/1303706203532296266",
+    autores: [
+      {
+        autor: {
+          name: "Edusx",
+          information: "",
+          perfilIcon: "",
+        },
+        autorType: "creador",
+      },
+    ],
+    Media: [],
+    versionGame: {
+      grafico: "creador",
+      version: "1.26",
+    },
+  },
+  {
+    mapId: "7",
+    mapName: "Defiende el Arbolito",
+    description:
+      "Mapa estilo Hero Defense en donde defiendes un árbol de varios enemigos que intentan destruirlo",
+    mapType: "Hero Defense",
+    origin: "Repositorio",
+    PlayersMax: "10",
+    downloadLink: "https://www.epicwar.com/maps/329697/",
+    autores: [
+      {
+        autor: {
+          name: "Gabzo",
+          information: "Se jubila y regresa a cada rato",
+          perfilIcon: "https://i.ibb.co/HLF6c3vR",
+        },
+        autorType: "creador",
+      },
+    ],
+    Media: [],
+    versionGame: {
+      grafico: "creador",
+      version: "1.27b",
     },
   },
 ];
