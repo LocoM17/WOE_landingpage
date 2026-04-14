@@ -1,4 +1,4 @@
-import CardMap from "@/components/cardMap/CardMap";
+import CardMap from "./cardMap/CardMap";
 import {
   Box,
   Center,

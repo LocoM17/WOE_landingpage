@@ -1,0 +1,169 @@
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  height: 455px;
+  min-height: 455px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px #265a79;
+  border-radius: 15px;
+  transition: all 0.3s;
+  z-index: 100;
+
+  &:hover {
+    box-shadow: 0 0 20px #44a2d8;
+
+    .poster {
+      &:before {
+        bottom: 0;
+      }
+      img {
+        filter: blur(5px);
+      }
+
+      .tagsAbsolute {
+        bottom: calc(100% - 60px);
+      }
+    }
+
+    .details {
+      bottom: 0;
+
+      .authorsBlock {
+        opacity: 1; // visible
+        transform: translateY(0); // vuelve a su lugar
+      }
+    }
+  }
+
+  .poster {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: -200px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, #1e1e21 70%, transparent);
+      transition: 0.5s;
+      z-index: 1;
+    }
+
+    .imgcontededor {
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; // la imagen se adapta al card
+        display: block; // evita espacios extra
+      }
+    }
+
+    .tagsAbsolute {
+      position: absolute;
+      bottom: 10px;
+      left: 15px;
+      z-index: 3;
+      transition: bottom 0.5s;
+
+      .title {
+        font-size: 18px;
+        font-weight: 700;
+        color: #ffbe00; // tu color original
+        text-shadow:
+          -1px -1px 0 black,
+          1px -1px 0 black,
+          -1px 1px 0 black,
+          1px 1px 0 black;
+      }
+
+      .type {
+        font-size: 14px;
+        font-weight: 600;
+        color: #58adcd; // tu color original
+        text-shadow:
+          -1px -1px 0 black,
+          1px -1px 0 black,
+          -1px 1px 0 black,
+          1px 1px 0 black;
+      }
+    }
+  }
+
+  .details {
+    position: absolute;
+    padding: 20px;
+    width: 100%;
+    height: calc(100% - 60px);
+    bottom: -320px;
+    left: 0;
+    box-sizing: border-box;
+    transition: 0.5s;
+    z-index: 2;
+    // padding-top: 90px;
+    // background-color: #265a79;
+    .info {
+      color: #fff;
+    }
+
+    .authorsBlock {
+      opacity: 0; // oculto por defecto
+      transform: translateY(40px); // desplazado hacia abajo
+      transition: all 0.5s;
+      width: 100%; // para que el bg se vea completo
+    }
+  }
+
+  .btn {
+    background-color: #135ea5; // tu color original
+    color: #fff;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: #316ba1; // tu color original
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    height: auto;
+    max-width: 100%;
+
+    .details {
+      // en móviles también empieza oculto
+      bottom: -320px;
+      height: auto;
+      // padding-top: 60px;
+      transition: 0.5s;
+    }
+
+    &:hover .details {
+      bottom: 0; // se desplaza hacia arriba igual que en desktop
+    }
+
+    .poster .tagsAbsolute {
+      bottom: 40px; // mantener abajo
+      left: 20px;
+
+      .title {
+        font-size: 16px;
+        color: #ffbe00;
+      }
+      .type {
+        font-size: 12px;
+        color: #58adcd;
+      }
+    }
+  }
+}
